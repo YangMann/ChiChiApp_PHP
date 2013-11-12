@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Database Error</title>
+<title>出错啦 Database Error - 交大吃吃</title>
 <style type="text/css">
 
 ::selection{ background-color: #E13300; color: white; }

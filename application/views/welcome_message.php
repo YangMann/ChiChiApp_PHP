@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+    <meta name="author" content="ChiChi @ SJTU">
+	<title>吃吃 | SJTU</title>
 
 	<style type="text/css">
 
@@ -13,7 +14,7 @@
 	body {
 		background-color: #fff;
 		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
+		font: 13px/20px normal Helvetica, Arial, "hiragino sans gb", "Microsoft Yahei", sans-serif;
 		color: #4F5155;
 	}
 
@@ -67,7 +68,7 @@
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+	<h1>交大吃吃 Powered by CodeIgniter!</h1>
 
 	<div id="body">
 		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>

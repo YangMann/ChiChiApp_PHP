@@ -1,0 +1,490 @@
+[
+    {
+        "building": "一餐",
+        "restaurants": [
+            {
+                "restaurant": "教工餐厅",
+                "foods": [
+                    {
+                        "name": "蜜汁叉燒",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47gw1e82pnw10hej21kw10ggxr.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜咸",
+                        "description": "觉得没有办法享受正宗的港式茶点很遗憾吗？没有关系，因为我们有蜜汁叉烧！甜蜜的芳香味扑鼻而来，红润的叉烧肉浇上稠浓的的卤汁。叉烧肉口感劲道，卤汁味道正好。还在等什么？快到碗里来！",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "四喜烤麩",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47gw1e82pnyce8gj21kw10hapa.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "咸鲜",
+                        "description": "木耳一只干，香菇六七朵，黄花菜一小把搭配出的四喜烤夫，色泽酱红，光鲜明亮，咸中带甜，透明又有韧性的烤夫，不会太烂又不会嚼不烂，完全恰到好处。咬上一口，满口香浓，鲜味直蹿味蕾。让你爱不释口！",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "農家扣肉",
+                        "url": "http://ww3.sinaimg.cn/large/bcf5ed47gw1e82po0zuqoj21kw10g173.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "香咸",
+                        "description": "我愿做一块扣肉……”看到这道菜瞬间就想到呆萌的麦兜了，能让麦兜如此深情歌颂的扣肉绝对是经典美食啊~虽然它的外观可能会吓跑要保持身材的女生们，但货真价实的吃货们却一定是双眼发光，做垂涎状*_*~切成薄片的五花肉色泽发光，软糯入味，肥而不腻，咸中带甜，扣肉下面的梅菜和浓浓的汤汁用来下饭是再好不过了~",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            },
+            {
+                "restaurant": "一品川菜",
+                "foods": [
+                    {
+                        "name": "口水雞",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47gw1e82pohks43j21kw10hk3z.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "麻辣香咸",
+                        "description": "佐料丰富，集麻辣鲜香嫩爽于一身。有“名驰巴蜀三千里，味压江南十二州”的美称。肉质鲜且嫩滑，分量也很足。兼具麻辣清香的口水鸡，哪里尝？快来一品川菜走一趟！",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "水煮魚",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47gw1e82pojoyf7j21kw10gn9s.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "麻辣鲜香咸",
+                        "description": "喜欢川菜的亲们有福啦！看到这道麻辣鲜香、驰名中外的水煮鱼，爱吃辣的孩子一定垂涎欲滴了吧~精心烹调出来的鱼肉口感滑嫩，油而不腻。既去除了鱼的腥味，又保持了鱼的鲜嫩。满目的辣椒红亮养眼，青红两色交相辉映。怕辣的孩子也不必望而却步，食堂里改良版的水煮鱼并没有想象中那么辣，多盛点饭吧，一定会胃口大开~",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "香辣蝦",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47gw1e82poly54cj21kw10gndc.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "麻辣鲜香咸",
+                        "description": "又是一道开胃圣品~光看这鲜亮诱人的外观就有点HOLD不住了呢虽然吃虾略麻烦，但也挡不住一颗吃货的心~虾壳里的肉质紧韧爽脆，浓郁的汤汁让包裹在里面的虾肉也很入味。其实香辣虾的精髓就在于其肉质和炒制时加上多种特制香料的调和，让人回味无穷，唇齿留香。",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            },
+            {
+                "restaurant": "海派食府",
+                "foods": [
+                    {
+                        "name": "茄汁大排",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47gw1e82poqxjtnj21kw10gn90.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "香咸",
+                        "description": "这道茄汁大排看一眼就让人食欲大增啊！鲜亮的浓汁和肥美的大排刺激着人的味蕾，嗷好想咬上一口~~酸酸甜甜的滋味让人回味无穷，茄汁和肉香融合成绝妙的美味。啃大排的时候难免弄得嘴角都沾满茄汁，不过形象是神马，能吃么~",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "幹煎帶魚",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47gw1e82potbokwj21kw10g4cj.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "裹上面粉炸过的带鱼呈现出金黄的色泽，红色的辣椒、绿色的葱花点缀得恰到好处。本身就无比鲜美的带鱼经过油煎和浇汁之后更是异常的美味。妹纸们，多吃带鱼，还可以养肝补血、泽肤养发哦~",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            },
+            {
+                "restaurant": "中式点心",
+                "foods": [
+                    {
+                        "name": "雞汁湯包",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47gw1e82povgs1oj21kw10g7gn.jpg",
+                        "genre": "",
+                        "price": "¥8",
+                        "taste": "鲜香咸",
+                        "description": "玲珑可爱的外形，看上去就很好吃的样子~（吃吃的形象就是只包子呢^o^）薄薄的皮里有口感软嫩肉馅，而在肉馅和皮之间就是鲜香浓郁的鸡汁啦~~一口咬下去滚烫的汁水窜进嘴里，吸完鸡汁后总是意犹未尽啊。不过童鞋们要小心哦，不要让汤汁溅出来了（浪费了好可惜呢~）",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            },
+            {
+                "restaurant": "淮杨快餐",
+                "foods": [
+                    {
+                        "name": "廣東叉燒",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47jw1e82poz3s9aj21kw10g4bn.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "交大餐厅汇聚了天南地北的各路美食，这道就是来自祖国南部广东的特色肉制品叉烧。叉烧带有粤菜特色的香甜味，制作起来是很讲究的。好的叉烧应该是肉质软嫩多汁、色泽鲜明、香味四溢。皮油亮酥脆，肉软香甜蜜。你吃到的叉烧味道如何呢？",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "東坡肉",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47jw1e82pp0yzt1j21kw10gwsl.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "这是苏东坡为浙菜做出的重大贡献，传世名菜啊（东坡先生其实也是枚吃货呢~）选用上好的五花肉，经过较为繁复的工序精心制作而成。薄皮嫩肉，色泽红亮，味醇汁浓，酥烂而形不碎，香糯而不腻口。肉食动物们的福利呀~",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "鹵鴨膀",
+                        "url": "http://ww3.sinaimg.cn/large/bcf5ed47jw1e82pp3bmttj21kw10gnc2.jpg",
+                        "genre": "",
+                        "price": "¥6",
+                        "taste": "鲜香咸",
+                        "description": "≧▽≦这个看上去好诱人呐！一看就觉得这鸭腿一定卤得非常入味，鸭腿肉充分吸收了卤汁的味道，吃进嘴里香味浓郁，回味无穷。若是火候控制得当，肉质软嫩一点，一定会让吃货们大饱口福，心满意足的~",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            },
+            {
+                "restaurant": "吉祥小厨",
+                "foods": [
+                    {
+                        "name": "揚州炒飯",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47jw1e82ppdvrd9j21kw10gamq.jpg",
+                        "genre": "",
+                        "price": "¥6",
+                        "taste": "香咸",
+                        "description": "扬州炒饭有时也俗称蛋炒饭，还有一个颇为文艺的名字“碎金饭”，是淮扬风味有名的主食之一。扬州炒饭的种类繁多，学校食堂里的应该是比较简单常见的一种。白米饭、蛋花、豌豆、胡萝卜丁、玉米、葱花，汇聚成这一道色彩丰富、香气扑鼻的炒饭。",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "菜肉餛燉",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47jw1e82ppftay3j21kw10gwoq.jpg",
+                        "genre": "",
+                        "price": "¥6",
+                        "taste": "鲜香咸",
+                        "description": "交大的吃货福利多，上海非常有名的吉祥馄饨干脆进驻交大一餐，让童鞋们能吃到最好的馄饨~馄饨是中国人重要的主食之一，起源于北方，不过现在全国都比较普及了，在广东它还有个好听的名字“云吞”。一餐吉祥馄饨品种丰富，皮薄馅大。寒冷的冬天吃上一碗暖暖的馄饨，真的很幸福呢~",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            },
+            {
+                "restaurant": "顺日北方小吃",
+                "foods": [
+                    {
+                        "name": "刀削面",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47jw1e82pphrvg1j21kw10gqev.jpg",
+                        "genre": "",
+                        "price": "¥6",
+                        "taste": "鲜香",
+                        "description": "刀削面是北方流行的一种面食，将面一片一片地削到开水锅内，煮熟后捞出，倒入配料丰富的臊子就可以食用啦。用刀削出的面叶，中厚边薄。棱锋分明，形似柳叶；入口外滑内筋，软而不粘，越嚼越香，喜欢面食的孩纸们不能错过哦~",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "醬香餅",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47jw1e82ppl6nwcj21kw10hamm.jpg",
+                        "genre": "",
+                        "price": "¥3",
+                        "taste": "香咸辣",
+                        "description": "酱香饼是土家族一种独特的小吃，现在在全国都比较流行，是公认的美食~吃过酱香饼的孩子应该都对那种浓郁的酱香味印象深刻吧，虽然口味略重，但真心好吃。酱香饼以香甜辣脆为主要特点，甜中带绵，辣而不燥，外脆里软。吃过以后，那浓浓的香味留在口腔中久久不散。",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "五谷米糊",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47jw1e82pppawk2j21kw10ggwi.jpg",
+                        "genre": "",
+                        "price": "¥3",
+                        "taste": "香淡甜",
+                        "description": "早上喝一杯一餐现磨的的五谷米糊，整个胃都会暖暖的。它的营养非常高，含有丰富的铁、钙等矿物质，且易于消化吸收，小米、黑米、荞麦、燕麦、红豆等等都可以成为五谷米糊的配料。虽然比一般的豆浆贵很多，但是物有所值嘛！~",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "building": "三餐",
+        "restaurants": [
+            {
+                "restaurant": "学生餐厅",
+                "foods": [
+                    {
+                        "name": "紅燒肉",
+                        "url": "http://ww3.sinaimg.cn/large/bcf5ed47jw1e82prss26rj21000n27ek.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "香咸",
+                        "description": "他的那个所有的酱汁都很透，然后呢咬起来时候，皮呢是Q的，但里面的肥肉的部分呢，是化开的，像猪油一样化开，然后呢最后呢瘦肉的部分很有嚼劲，但是又不会太老，最重要的是这难道不是家里的味道啊！",
+                        "photographer": "高立波"
+                    },
+                    {
+                        "name": "五香熏魚",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47jw1e82prwud0jj21000n2nco.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "川香口味，色泽金黄，外酥里嫩，肉质细腻，味道鲜美，含丰富蛋白质，维生素A，矿物质等营养元素，提神防衰老，是交大学生必备健康食物！",
+                        "photographer": "高立波"
+                    },
+                    {
+                        "name": "上海醬鴨",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47jw1e82ps0wfzfj21000n214n.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "咸",
+                        "description": "本帮名菜，浓油赤酱，味道咸甜适中，从农家便饭便菜发展而来，比较朴素实惠，以红烧、生偏见长，口味较重，颇有家常风味。",
+                        "photographer": "高立波"
+                    }
+                ]
+            },
+            {
+                "restaurant": "外婆桥",
+                "foods": [
+                    {
+                        "name": "川味牛腩",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47jw1e82ps3ygdqj21000n2n73.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "香辣味川菜，天府之国的菜口感有保障！土豆烧牛肉的正宗味道，健脾胃，保护胃黏膜，提供的热量保证工作学习所需。",
+                        "photographer": "高立波"
+                    },
+                    {
+                        "name": "美極鳳尾魚",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47jw1e82ps790ykj21000n24ai.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "长江绕郭知鱼美~闵大荒再没有商业气息那也有乡土气息嘛！这道菜做法比较复杂，精细，费时，费人工，成为一道佳肴尚属不易，这道菜咸，香，嫩，有利于智力发育哦~",
+                        "photographer": "高立波"
+                    },
+                    {
+                        "name": "梅幹菜烤肉",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47jw1e82psaug2qj21000n213k.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "经典本帮菜之一，本帮菜倚靠长三角，四方交集，五味杂陈，失去了纯粹性但依然保有地道口味的本帮菜，甜甜的梅干菜最下饭，入味的五花肉最口耐！",
+                        "photographer": "高立波"
+                    }
+                ]
+            },
+            {
+                "restaurant": "飞浩3",
+                "foods": [
+                    {
+                        "name": "茄汁排條",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47jw1e82pseyv6tj21000n2gyc.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "咸酸甜",
+                        "description": "家常菜，酸甜，色泽鲜艳，高中食堂天天吃，都快变成高中的回忆了。不管你信不信，反正我是信了。",
+                        "photographer": "高立波"
+                    },
+                    {
+                        "name": "爆炒仔雞",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47jw1e82pshn9smj21000n27f6.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "川菜，鲜嫩，香辣，鸡肉又香又脆，外酥里嫩，脆爽又不油腻，味道甘香，诱人的色泽、丰富的浇头，好吃到过分！过分！过分！",
+                        "photographer": "高立波"
+                    },
+                    {
+                        "name": "手工百葉包",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47jw1e82psk96h3j21000n2jz2.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "枸杞，润滑，口感好，用鲜百叶包肉，富有营养，百叶软嫩，肉馅鲜香多汁，望着那么美味的百叶包，我的口水早就“飞流直下三千尺”了，我顾不得什么文艺男形象，抓起百叶包就往嘴里塞，顿时，嫩肉涌进了我的嘴里，好润，好香，我沉浸在美妙的世界里，待我反应过来，我又迫不及待地往嘴里塞百叶包了。",
+                        "photographer": "高立波"
+                    }
+                ]
+            },
+            {
+                "restaurant": "外婆桥2",
+                "foods": [
+                    {
+                        "name": "土耳其烤肉飯",
+                        "url": "http://ww3.sinaimg.cn/large/bcf5ed47jw1e82pssq53qj21000n214j.jpg",
+                        "genre": "",
+                        "price": "¥9",
+                        "taste": "香咸",
+                        "description": "鸡肉、大头菜、洋葱、香菜、鸡蛋、西红柿在铁板上翻炒，味道很香，让人直流口水，微感略油，但是好大一个碗！",
+                        "photographer": "高立波"
+                    }
+                ]
+            },
+            {
+                "restaurant": "飞浩2",
+                "foods": [
+                    {
+                        "name": "菠蘿咕咾肉",
+                        "url": "http://ww3.sinaimg.cn/large/bcf5ed47jw1e82psvgwhwj21000n27cs.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "酸甜",
+                        "description": "淀粉包肉烧，色泽美观，红绿相间，酸甜可口，增进食欲，肥而不腻，入菜口感清新解腻，无论作为水果还是菜肴，都非常美味，为啥子作为上海人他们老说这是本帮菜，明明",
+                        "photographer": "高立波"
+                    },
+                    {
+                        "name": "香辣排骨",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47jw1e82pt6v6d4j21000n2qdh.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "辣香",
+                        "description": "亲！闭上眼睛想想啃骨头的滋味！那种牙齿和骨头的摩擦与碰撞！那种肉被一条条撕下来的快感！那种在嘴里嚼着又带着点点口水四溅的享受！没错！这道菜叫香辣排骨！",
+                        "photographer": "高立波"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "building": "四餐",
+        "restaurants": [
+            {
+                "restaurant": "教工餐厅",
+                "foods": [
+                    {
+                        "name": "五香魚條",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47gw1e82pu4x3f4j21kw10g187.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香",
+                        "description": "精心挑选新鲜的活鱼，用秘制配方腌制，去除了鱼的腥味，保留的全是鱼的鲜美。再配合芡汁的浓郁五香，真是闻了就忍不住赶快动筷子啊~挟起一块鱼条放进嘴里，一咬下去只觉得外酥里嫩，浓香满溢整个嘴巴，感觉真的超满足=w=~~",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "咖哩醬排骨",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47gw1e82pu7k2svj21kw10gdva.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "香咸",
+                        "description": "肉，是挑选排骨中最精华的肋排；酱料，是日式咖喱酱和番茄酱以绝妙的比例混合调制而成。光看图片就让人流口水有木有~\\(≧▽≦)/~如果放进嘴里，一定是这样的感觉：味蕾都随着酱香和肉香起舞，肿么可以这么好吃！",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "牛肉玉米筍",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47gw1e82pua1296j21kw10gwu9.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香咸",
+                        "description": "只去籽粒尚未隆起的幼嫩玉米笋果穗，与严格挑选不含牛筋和脂肪的牛里脊组成绝妙搭配。玉米笋清香，牛肉嫩滑，经大厨师傅以精湛技艺翻炒，最后淋上黑胡椒汁。哇，一出锅只觉香味扑鼻，令人胃口大开，口水直流啊~~",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            },
+            {
+                "restaurant": "学生餐厅",
+                "foods": [
+                    {
+                        "name": "香酥鴨肉",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47gw1e82puqdkdxj21kw10gnek.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "香咸",
+                        "description": "吃过了烤鸭、炖鸭，来尝尝四餐学生餐厅的香酥鸭肉吧~绝对不是一般的鸭肉哦~色彩鲜亮、香味浓郁（还忍得住口水麽~~）皮层香酥、肉质鲜嫩（Hiahia忍不住口水了吧o（^ω^)o~~)口水忍不住就不要再忍了嘛，赶快去尝尝满足你的舌头和胃吧~）",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "醬汁肋排",
+                        "url": "http://ww3.sinaimg.cn/large/bcf5ed47gw1e82put34ffj21kw10gk7g.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "香咸",
+                        "description": "取肋排剁成寸段，加入各种作料，中火焖至汤汁烧得呈浓稠状，使汤汁的味道进入排骨中，待排骨熟烂出锅，最后将烧排骨的汤汁重新烧至浓稠，将浓汤浇在排骨上。这酱汁肋排色泽酱红，肉质酥烂，芳香扑鼻，咸中带甜，实在是人间美味啊~",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            },
+            {
+                "restaurant": "岭南美馔汇",
+                "foods": [
+                    {
+                        "name": "果木烤鴨飯",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47gw1e82puv2o7uj21kw10gtmv.jpg",
+                        "genre": "",
+                        "price": "¥9.9",
+                        "taste": "香咸",
+                        "description": "精选的鸭肉以多种果木特殊配比烤制而成，其鸭皮富有果香味，酥脆爽口，而鸭肉软嫩，且营养丰富，有去火养颜之功效。如此美味又养生的食物，你还在等什么呢？还不赶快去尝一尝\\(^o^)/",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "啤酒鴨肉米粉",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47gw1e82pv0eqv5j21kw10gk71.jpg",
+                        "genre": "",
+                        "price": "¥9",
+                        "taste": "鲜香",
+                        "description": "啤酒鸭是将鸭肉与啤酒一同炖煮成菜，使滋补的鸭肉味道更加浓厚，鸭肉不仅入口鲜香，还带有一股啤酒清香。搭配的主食桂林米粉洁白、细嫩、软滑、爽口。鸭肉醇香，米粉爽滑，放在一起搭配得恰到好处，真是让人吃了一份还想再来一份o(^ω^)o",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "building": "五餐",
+        "restaurants": [
+            {
+                "restaurant": "学生餐厅",
+                "foods": [
+                    {
+                        "name": "水煮魚片",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47gw1e82pvx94b0j21kw10gap8.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "麻辣鲜",
+                        "description": "吃过川菜的同学肯定都知道这个，川菜经典美食，历史悠久，选用新鲜草鱼，切片之后炖制而成，加入豆芽、香菜，整道菜看起来油光闪闪，不断的勾引食客。尝起来麻辣鲜香，口感滑嫩无比，相信不用多说，很多同学也都了解这个滋味，味道其实一点也不辣，就算比较怕辣椒的同学也不用担心啊！",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "東坡肉",
+                        "url": "http://ww3.sinaimg.cn/large/bcf5ed47gw1e82pvzh4hsj21kw10hdw3.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "香咸",
+                        "description": "来自杭帮菜，相传是苏东坡所创制，1080年苏东坡谪居黄冈，因当地猪多肉贱，才想出这种吃肉的方法。（你妹啊！猪肉这么便宜！恨啊！）选用了上等农家黑毛猪烹制而成（我也不知道是什么⊙﹏⊙b），咸鲜味美，更有浓郁酱汁搭配。咬上一口，口有余香啊~只要你喜欢吃肉，这样历史悠久的肉菜可不能错过！",
+                        "photographer": "刘天元"
+                    },
+                    {
+                        "name": "三鮮雙圓",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47gw1e82pw2384sj21kw10hdw8.jpg",
+                        "genre": "",
+                        "price": "¥4",
+                        "taste": "鲜香",
+                        "description": "上海本帮菜，原料油肉皮、菌菇、小木耳、西兰花、鹌鹑蛋、新鲜肉糜，看起来真是原料丰富一副大补的样子啊！菜肴出锅之后色泽清亮、鲜艳无比，语言的话比较难形容，总之就是看上去就好吃的那种！肉丸加上鹌鹑蛋，更有三鲜辅味，蛋白质丰富同时味道鲜美~厨师说这就是为了广大师生做的补品啊！厨师真是好人啊T T",
+                        "photographer": "刘天元"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "building": "哈乐",
+        "restaurants": [
+            {
+                "restaurant": "哈乐餐厅",
+                "foods": [
+                    {
+                        "name": "水果蛋包飯",
+                        "url": "http://ww4.sinaimg.cn/large/bcf5ed47gw1e82pwdb8o4j21kw11sqmg.jpg",
+                        "genre": "",
+                        "price": "¥8",
+                        "taste": "鲜咸酸甜",
+                        "description": "水果选用的是新鲜优质的时令水果，清爽甘甜。金黄色的蛋皮包裹着美味可口的水果拌饭，搭配上酸甜的番茄沙司，超赞！吃着满溢番茄酱香的饭时，不时就吃到一块水果，很好地除去了番茄酱的腻味哦~哇，看着这鲜艳的色泽，闻着扑鼻的香味，真是食欲大增啊O(∩_∩)O哈哈~",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "咖哩炸雞",
+                        "url": "http://ww2.sinaimg.cn/large/bcf5ed47gw1e82pwg37ajj21kw11s4ex.jpg",
+                        "genre": "",
+                        "price": "¥8",
+                        "taste": "咸",
+                        "description": "鸡块用秘方腌制之后经高温油炸，外皮酥脆，肉质鲜嫩。咖喱酱色泽金黄，香味浓郁，可是大厨精心研制的哦~浇在炸鸡块和米饭上，饭香、鸡块的肉香、咖喱的酱香完美的融合在了一起哦~那叫一个好吃吖~",
+                        "photographer": "李瑛恺"
+                    },
+                    {
+                        "name": "新加坡幹拌面",
+                        "url": "http://ww1.sinaimg.cn/large/bcf5ed47gw1e82pwjnorzj21kw10g4l1.jpg",
+                        "genre": "",
+                        "price": "¥6",
+                        "taste": "咸",
+                        "description": "哈乐独创的哦~面条爽滑有劲道，辣而不燥，油而不腻。拌上混合了肉末、茭白和香干等的香浓炸酱，最后画龙点睛地加点由雪菜油炸而成的松脆雪菜松。整碗面颜色红亮，鲜辣可口，堪称面食中的精品啊~HOHO美味干拌面就在哈乐哦，是不是吃货都赶紧滴吖！",
+                        "photographer": "李瑛恺"
+                    }
+                ]
+            }
+        ]
+    }
+]

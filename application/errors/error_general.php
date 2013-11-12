@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Error</title>
+<title>出错啦 Error - 交大吃吃</title>
 <style type="text/css">
 
 ::selection{ background-color: #E13300; color: white; }
