@@ -31,7 +31,6 @@ class Blog_Model extends CI_Model {
             }
         } else {
             $query = $this->db->get('blog');
-            print_r($query);
             if ($query->num_rows() !== 0) {
                 foreach ($query->result() as $row) {
                     $blog['id'][] = $row->id;

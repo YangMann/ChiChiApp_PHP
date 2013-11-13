@@ -137,7 +137,7 @@ class CI_Security {
         }
 
         // 通过设置AJAX request header字段来验证CSRFToken
-        if (isset($_SERVER['HTTP_X_CSRFTOKEN']) && ($_SERVER['HTTP_X_CSRFTOKEN'] == $_COOKIE[$this->_csrf_cookie_name])) {
+        if (isset($_SERVER['HTTP_X_CSRFTOKEN']) && ($_SERVER['HTTP_X_CSRFTOKEN'] === $_COOKIE[$this->_csrf_cookie_name])) {
             return $this;
         }
 

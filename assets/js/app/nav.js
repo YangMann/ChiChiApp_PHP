@@ -446,15 +446,19 @@ $(document).ready(function () {
     if (history && history.pushState) {
         var loaded = false;
         $(window).bind("popstate", function () {
-            console.log("window bind called");
             if (!loaded) {
                 loaded = true;
             } else {
                 NProgress.start();
-                $.post("/a/" + location.href.replace(/\w+:\/\/[A-Za-z0-9:.]+\/(\w+)/,"$1"), {}, function(response) {
-                    $(target).html(response);
-                    NProgress.done();
-                });
+                var targetUrl = location.href.replace(/\w+:\/\/[A-Za-z0-9:.]+\/(\w+)/, "$1");
+                if (targetUrl.indexOf("http") !== -1) {
+                    window.location.reload();
+                } else {
+                    $.post("/a/" + targetUrl, {}, function (response) {
+                        $(target).html(response);
+                        NProgress.done();
+                    });
+                }
             }
         });
     } else {
