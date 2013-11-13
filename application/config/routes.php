@@ -39,8 +39,10 @@
 */
 
 $route['default_controller'] = "pages/view";
+//$route['default_controller'] = "blog_controller";
 //$route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';
+//$route['scaffolding_trigger'] = "scaffolding";
 
 
 /* End of file routes.php */

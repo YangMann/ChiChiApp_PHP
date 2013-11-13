@@ -22,6 +22,9 @@ class Pages extends CI_Controller {
             case 'home':
                 $data['title'] = "首页";
                 break;
+            case 'blog':
+                $data['title'] = '博客';
+                break;
         }
 
         $this->load->view('templates/header', $data);
