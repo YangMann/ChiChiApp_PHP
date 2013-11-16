@@ -37,14 +37,18 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+$route['blog/(:any)'] = 'blog_controller/view/$1';
+$route['a/(\w+)'] = 'a/$1';
+$route['(:any)'] = 'pages/view/$1';
+$route['default_controller'] = "pages/view";
 
-//$route['default_controller'] = "pages/view";
+/*
 $route['a/(\w+)'] = 'a/$1';
 $route['admin'] = 'admin';
 $route['auth'] = 'auth';
 //$route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';
-
+*/
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

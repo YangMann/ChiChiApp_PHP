@@ -21,14 +21,21 @@ class Blog_Controller extends CI_Controller {
         $this->view($blogId = null);
     }
 
-    function view($blogId) {
+    function view($blogId=null) {
+        $data['title'] = "";
+        $data['stylesheet'] = "";
+        $data['script'] = "";
         $data['blog'] = $this->blog_model->get_blogs($blogId);
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/nav', $data);
         if ($blogId !== null) {
             $this -> load -> view('templates/blog_single', $data);
         } else {
-            print_r($data);
+           # print_r($data);
             $this->load->view('pages/blog', $data);
         }
+        $this->load->view('templates/footer', $data);
+
     }
 
 

@@ -1,12 +1,8 @@
-<?php
-//echo 'pages/blog<br>';
-$count = count($blog['id']);
-//echo $count;
-for ($i = 0; $i < $count; $i++) {
-    ?>
-    <div class="blogdiv">
-        <?= anchor('/blog/view/'.$blog['id'][$i], $blog['title'][$i]) ?>
-        <p><?= $blog['summary'][$i] ?></p>
-    </div>
-<?php
-}
+<div class="g-r fw-wrapper">
+    <?php include 'application/views/templates/cover.php' ?>
+    <section class="u-2-3 wd-wrapper" tabindex="-1">
+        <div class="wd-main" id="wd-main">
+            <?php include 'application/views/pages/blog_content.php' ?>
+        </div>
+    </section>
+</div>

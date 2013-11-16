@@ -1,4 +1,4 @@
-<?php
+<?php require "blog_controller.php";
 /**
  * Created by PhpStorm.
  * User: JeffreyZhang
@@ -17,21 +17,25 @@ class Pages extends CI_Controller {
         $data['title'] = "";
         $data['stylesheet'] = "";
         $data['script'] = "";
+        $this->load->model('blog_model');
 
         switch ($page) {
             case 'home':
                 $data['title'] = "首页";
+                $this->load->view('templates/header', $data);
+                $this->load->view('templates/nav', $data);
+                $this->load->view('pages/home', $data);
+                $this->load->view('templates/footer', $data);
                 break;
             case 'blog':
                 $data['title'] = '博客';
+                $this->load->helper('url');
+                $this->load->library('tank_auth');
+               // $data['blog'] = $this->blog_model->get_blogs(null);
+                Blog_Controller::view(null);
+
                 break;
         }
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/nav', $data);
-        $this->load->view('pages/'.$page, $data);
-        $this->load->view('templates/footer', $data);
-
     }
 
 } 
