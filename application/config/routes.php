@@ -38,9 +38,11 @@
 |
 */
 
-$route['default_controller'] = "pages/view";
+//$route['default_controller'] = "pages/view";
 $route['a/(\w+)'] = 'a/$1';
-$route['(:any)'] = 'pages/view/$1';
+$route['admin'] = 'admin';
+$route['auth'] = 'auth';
+//$route['(:any)'] = 'pages/view/$1';
 $route['404_override'] = '';
 
 

@@ -1272,3 +1272,14 @@ input.nv-search:focus {
 .wd-inner {
     padding-top: 10px;
 }
+
+@media (max-width: 767px) {
+    .as-cover {
+        position: relative;
+        max-width: 100%;
+    }
+
+    .wd-wrapper {
+        position: relative;
+    }
+}
