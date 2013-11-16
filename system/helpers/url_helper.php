@@ -68,6 +68,14 @@ if ( ! function_exists('base_url'))
 	}
 }
 
+if ( ! function_exists('css_url'))
+{
+    function css_url($uri = '')
+    {
+        $CI =& get_instance();
+        return $CI->config->base_url("/public/css".$uri);
+    }
+}
 // ------------------------------------------------------------------------
 
 /**
