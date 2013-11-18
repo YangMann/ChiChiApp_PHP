@@ -5,6 +5,8 @@
  * Date: 13-11-18
  * Time: 12:14
  */
+define("GOOGLE_API_KEY", "AIzaSyA4g71gAcTsRnmIE78n9iSdlvTqwLDCAcM");
+define("GOOGLE_GCM_URL", "https://android.googleapis.com/gcm/send");
 
 class Gcm extends CI_Controller {
 
@@ -12,47 +14,37 @@ class Gcm extends CI_Controller {
         parent::__construct();
 
         $this->load->helper('url');
-        $this->load->library('gcm');
     }
 
     function index() {
-        $data['title'] = 'Google Cloud Message';
-        $data['heading'] = 'Testing';
-
-        $this->load->view("pages/gcm", $data);
     }
 
-    public function send_gcm() {
-        //simple adding message.
-        $this->gcm->setMessage('Test message '.date('d.m.Y H:s:i'));
+    function send_gcm_notify($reg_id) {
+        $message = "Google Cloud Messaging works well!";
+        $fields = array(
+            'registration_ids' => array($reg_id),
+            'data' => array("message" => $message)
+        );
+        $headers = array(
+            'Authorization: key='.GOOGLE_API_KEY,
+            'Content-Type: application/json'
+        );
 
-        //add recepients
-        $this->gcm->addRecepient('RegistrationId');
-        $this->gcm->addRecepient('New reg id');
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, GOOGLE_GCM_URL);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
 
-        //set additional data
-        $this->gcm->setData(array(
-            'some_key' => 'some_val'
-        ));
+        $result = curl_exec($ch);
+        if ($result === FALSE) {
+            die('Problem occured: '.curl_error($ch));
+        }
 
-        //set time to live
-        $this->gcm->setTtl(500);
-        // $this->gcm->setTtl(false);
-
-        //set group for messages if needed
-        $this->gcm->setGroup('Test');
-        //$this->gcm->setGroup(false);
-
-        //send messages
-        if ($this->gcm->send())
-            echo 'Success for all messages';
-        else
-            echo 'Some messages hava errors';
-
-        //see responsed for more info
-        print_r($this->gcm->status);
-        print_r($this->gcm->messageStatuses);
-
-        die(' Worked.');
+        curl_close($ch);
+        echo $result;
     }
+
 }
