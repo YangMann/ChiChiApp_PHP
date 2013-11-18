@@ -18,6 +18,8 @@ class Gcm extends CI_Controller {
     function index() {
         $data['title'] = 'Google Cloud Message';
         $data['heading'] = 'Testing';
+
+        $this->load->view("pages/gcm", $data);
     }
 
     public function send_gcm() {

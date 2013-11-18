@@ -1266,11 +1266,18 @@ input.nv-search:focus {
 }
 
 .wd-main {
-    height: 100%
+    height: 100%;
 }
 
 .wd-inner {
-    padding-top: 10px;
+    max-width: 810px;
+    padding: 50px 85px 50px 0;
+}
+
+@media (max-width: 1100px) {
+    .wd-inner {
+        padding-left: 10%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1282,4 +1289,90 @@ input.nv-search:focus {
     .wd-wrapper {
         position: relative;
     }
+}
+/*
+ *  博客
+ *
+ */
+.bl-list-header {
+    height: 40px;
+    /*border-top: 1px solid #dededc;*/
+    border-bottom: 1px solid #dededc;
+    font-size: 14px;
+    color: #b3b3b1;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.bl-sort-header {
+    display: inline-block;
+    width: auto;
+    margin: 0 20px 0 0;
+}
+
+.bl-sort-header.bl-sort-header-active {
+    border-bottom: 1px solid #332624;
+}
+
+.bl-sort-header.bl-sort-header-active a {
+    color: #332624;
+}
+
+.bl-sort-header > a {
+    display: block;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b3b3b1;
+    -webkit-transition: color .1s linear;
+    -moz-transition: color .1s linear;
+    -ms-transition: color .1s linear;
+    -o-transition: color .1s linear;
+    transition: color .1s linear;
+}
+
+.bl-sort-header > a:hover,
+.bl-sort-header > a:active {
+    color: #332624;
+}
+
+.bl-item {
+    display: block;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f2f2f0;
+    word-wrap: break-word;
+    -webkit-transition: opacity .5s linear;
+    -moz-transition: opacity .5s linear;
+    -ms-transition: opacity .5s linear;
+    -o-transition: opacity .5s linear;
+    transition: opacity .5s linear;
+}
+
+.bl-item-title {
+    margin: 0;
+    font-weight: 700;
+    font-style: normal;
+    padding-bottom: 6px;
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.bl-item-title a {
+    color: #332624;
+}
+
+.bl-item-summary {
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 6px;
+    font-size: 18px;
+    color: #332624;
+}
+
+.bl-item-summary p {
+    line-height: 1.4;
 }

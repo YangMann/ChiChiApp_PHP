@@ -37,7 +37,7 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-$route['gcm/(:any)'] = 'gcm/index';
+$route['gcm/(:any)'] = 'gcm';
 $route['blog/(:any)'] = 'blog_controller/view/$1';
 $route['a/(\w+)'] = 'a/$1';
 $route['(:any)'] = 'pages/view/$1';

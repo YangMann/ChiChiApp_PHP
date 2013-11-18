@@ -22,7 +22,7 @@ class Blog_Controller extends CI_Controller {
     }
 
     function view($blogId=null) {
-        $data['title'] = "";
+        $data['title'] = "博客";
         $data['stylesheet'] = "";
         $data['script'] = "";
         $data['blog'] = $this->blog_model->get_blogs($blogId);
