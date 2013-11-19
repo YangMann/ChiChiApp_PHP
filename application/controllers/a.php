@@ -21,15 +21,20 @@ class A extends CI_Controller {
     }
 
     function blog($blogId = null) {
-        $purpose = $this->input->get('t');
+//        $purpose = $this->input->get('t');
+//        print_r($blogId);
+        $purpose = "";
         switch ($purpose) {
             case 'edit':
                 echo "edit!!!!";
                 break;
             default:
+                $data['title'] = "博客";
+                $data['stylesheet'] = "";
+                $data['script'] = "";
                 $data['blog'] = $this->blog_model->get_blogs($blogId);
                 if ($blogId !== null) {
-                    $this->load->view('templates/blog_single_content', $data);
+                    $this -> load -> view('templates/blog_single', $data);
                 } else {
                     $this->load->view('pages/blog_content', $data);
                 }

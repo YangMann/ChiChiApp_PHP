@@ -6,6 +6,9 @@
  * Time: 下午1:24
  */
 ?>
+<!DOCTYPE html>
+<html>
 TEST!!!!
 <?= $gcm["title"] ?>
 <h2><?= $gcm["heading"] ?></h2>
+</html>

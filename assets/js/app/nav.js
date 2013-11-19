@@ -395,6 +395,11 @@
 
         plugin.init = function () {
             plugin.settings = $.extend({}, defaults, options);
+            if (plugin.settings["target"] === "wd-fullscreen") {
+//                plugin.target = plugin.settings["target"];
+//                $(document).find(".as-cover").addClass("wd-fullscreen");
+//                $(document).find(".wd-wrapper").addClass("wd-fullscreen");
+            }
             mainHandler(index);
         };
 

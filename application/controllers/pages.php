@@ -28,6 +28,7 @@ class Pages extends CI_Controller {
                 $this->load->view('templates/footer', $data);
                 break;
             case 'blog':
+                $data['title'] = "博客";
                 $this->load->helper('url');
                 $this->load->library('tank_auth');
                // $data['blog'] = $this->blog_model->get_blogs(null);
@@ -38,6 +39,8 @@ class Pages extends CI_Controller {
                 $data['title'] = 'GCM';
                 echo 'Google Cloud Messaging Test';
                 break;
+            case 'phpinfo':
+                $this->load->view('pages/phpinfo');
         }
     }
 

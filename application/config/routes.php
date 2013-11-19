@@ -39,17 +39,17 @@
 */
 $route['gcm/(:any)'] = 'gcm/send_gcm_notify/$1';
 $route['blog/(:any)'] = 'blog_controller/view/$1';
+$route['a/blog/(:any)'] = '/a/blog/$1';
 $route['a/(\w+)'] = 'a/$1';
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = "pages/view";
-
+$route['404_override'] = '';
 
 /*
 $route['a/(\w+)'] = 'a/$1';
 $route['admin'] = 'admin';
 $route['auth'] = 'auth';
 //$route['(:any)'] = 'pages/view/$1';
-$route['404_override'] = '';
 */
 
 /* End of file routes.php */

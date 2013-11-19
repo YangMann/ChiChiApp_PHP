@@ -27,34 +27,31 @@ function csrfSafeMethod(method) {
 
 $.ajaxSetup({
     crossDomain: false, // obviates need for sameOrigin test
-    beforeSend: function(xhr, settings) {
+    beforeSend: function (xhr, settings) {
         if (!csrfSafeMethod(settings.type)) {
             xhr.setRequestHeader("X-CSRFToken", csrftoken);
         }
     }
 });
 
-/*
-var app = angular.module("chichi", []);
-
-app.controller('photoFlowController', function($scope) {
-    $scope.photo = {
-        name: "ChiChi"
-    };
-});
-
-app.controller('blogController', function($scope) {
-    $scope.blog = {
-        name: "ChiChi - Blog"
-    };
-});
-*/
-
-
-$(window).ready(function() {
+function redirCapture() {
     var redirInstances = $("[data-redir]");
-    redirInstances.each(function(index, element) {
-        var params = {};
+    redirInstances.each(function (index, element) {
+        var targetBlock = $(element).data("redir-target");
+//        console.log(targetBlock);
+        var params = {"target": targetBlock};
         $(element).redir(index, params);
     });
-});
+}
+
+$(window).ready(function () {
+    redirCapture();
+}).ajaxComplete(function (event, request, settings) {
+//        console.log("AjaxComplete");
+        var redirInstances = $("[data-redir]");
+        redirInstances.each(function(index, element) {
+            $(element).unbind("click");
+        });
+        redirCapture();
+    });
+

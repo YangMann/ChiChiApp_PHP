@@ -1,6 +1,7 @@
 <!-- end of div.fw-container -->
 </div>
 <script>window.jQuery || document.write('<script src="/assets/js/libs/jquery/jquery-1.10.2.min.js"><\/script>')</script>
+<!--<script src="/assets/js/libs/jquery/jquery-migrate.min.js"></script>-->
 <script type="text/javascript" src="/assets/js/libs/modernizr/modernizr.custom.js"></script>
 <script type="text/javascript" src="/assets/js/app/nav.js"></script>
 <script type="text/javascript">

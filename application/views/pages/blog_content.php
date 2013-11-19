@@ -24,9 +24,11 @@ for ($i = 0; $i < $count; $i++) {
     ?>
     <article class="bl-item">
         <h3 class="bl-item-title">
-            <a href="<?= '/blog/' . $blog['id'][$i] ?>" title="<?= $blog['title'][$i] ?>"><?= $blog['title'][$i] ?></a>
+            <a href="<?= '/blog/' . $blog['id'][$i] ?>" title="<?= $blog['title'][$i] ?>"
+               data-redir="<?= 'blog/' . $blog['id'][$i] ?>" data-redir-target="wd-fullscreen"><?= $blog['title'][$i] ?></a>
         </h3>
-        <a class="bl-item-summary" href="<?= '/blog/' . $blog['id'][$i] ?>" title="<?= $blog['title'][$i] ?>">
+        <a class="bl-item-summary" href="<?= '/blog/' . $blog['id'][$i] ?>" title="<?= $blog['title'][$i] ?> "
+           data-redir="<?= 'blog/' . $blog['id'][$i] ?>" data-redir-target="wd-fullscreen">
             <p><?= $blog['summary'][$i] ?></p>
         </a>
     </article>
