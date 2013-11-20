@@ -406,6 +406,7 @@
                 var href = "/" + $(this).attr("data-redir") + "/";
                 NProgress.start();
                 e.preventDefault();
+                var state = {coverDisplayBefore: $(".as-cover").data("cover-display")};
                 /*if (history && history.pushState) {
                     console.log("pushed state", {coverDisplay: $(".as-cover").data("cover-display")});
                     history.pushState({coverDisplay: $(".as-cover").data("cover-display")}, document.title, "/" + $(this).attr("data-redir") + "/");
@@ -435,8 +436,9 @@
                                 $(".wd-wrapper").removeClass("wd-fullscreen");
                             }
                             if (history && history.pushState) {
+                                state.coverDisplayAfter = $(".as-cover").data("cover-display");
 //                                console.log("pushed state", {coverDisplay: $(".as-cover").data("cover-display")});
-                                history.pushState({coverDisplay: $(".as-cover").data("cover-display")}, document.title, href);
+                                history.pushState(state, document.title, href);
                             }
                             else {
                                 window.location.hash = "!" + $(this).attr("data-redir");
@@ -481,10 +483,10 @@ $(document).ready(function () {
                     window.location.reload();
                 } else {
                     $.post("/a/" + targetUrl, {}, function (response) {
-                        if (e.originalEvent.state == null || e.originalEvent.state["coverDisplay"] === "show") {
+                        if (e.originalEvent.state == null || e.originalEvent.state["coverDisplayBefore"] === "show") {
                             $(".as-cover").removeClass("wd-fullscreen").attr("data-cover-display", "show");
                             $(".wd-wrapper").removeClass("wd-fullscreen");
-                        } else if (e.originalEvent.state["coverDisplay"] === "hidden") {
+                        } else if (e.originalEvent.state["coverDisplayBefore"] === "hidden") {
                             $(".as-cover").addClass("wd-fullscreen").attr("data-cover-display", "hidden");
                             $(".wd-wrapper").addClass("wd-fullscreen");
                         }
