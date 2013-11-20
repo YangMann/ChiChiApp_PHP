@@ -3,7 +3,7 @@
 
     <section class="u-3-5" tabindex="-1">
 
-        <div class="wd-main" id="wd-main">
+        <div class="bl-view-wrapper">
             <?php include 'application/views/templates/blog_single_content.php' ?>
         </div>
     </section>

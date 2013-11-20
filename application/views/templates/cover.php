@@ -1,4 +1,4 @@
-<aside class="u-1-3 as-cover">
+<aside class="u-1-3 as-cover" data-cover-display="show">
     <div class="as-cover-img"></div>
     <div class="as-cover-img as-cover-img-b transparent"></div>
     <div class="as-cover-body-wrapper">

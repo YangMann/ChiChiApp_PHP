@@ -395,11 +395,6 @@
 
         plugin.init = function () {
             plugin.settings = $.extend({}, defaults, options);
-            if (plugin.settings["target"] === "wd-fullscreen") {
-//                plugin.target = plugin.settings["target"];
-//                $(document).find(".as-cover").addClass("wd-fullscreen");
-//                $(document).find(".wd-wrapper").addClass("wd-fullscreen");
-            }
             mainHandler(index);
         };
 
@@ -408,24 +403,49 @@
                 return;
             }
             $elements.on("click", function (e) {
+                var href = "/" + $(this).attr("data-redir") + "/";
                 NProgress.start();
                 e.preventDefault();
-                if (history && history.pushState) {
-                    history.pushState(null, document.title, "/" + $(this).attr("data-redir") + "/");
+                /*if (history && history.pushState) {
+                    console.log("pushed state", {coverDisplay: $(".as-cover").data("cover-display")});
+                    history.pushState({coverDisplay: $(".as-cover").data("cover-display")}, document.title, "/" + $(this).attr("data-redir") + "/");
                 }
                 else {
                     window.location.hash = "!" + $(this).attr("data-redir");
+                }*/
+                if ($(document).find(".wd-main").length === 0) {
+                    console.log("!wd-main");
+//                    $.post("/" + $(this).attr("data-redir") + "/", {}, function (response) {
+//                        $(document).html(response);
+//                    })
+                    location.href = $(this).attr("href");
+                } else {
+                    console.log("else");
+                    $.ajax({
+                        type: "POST",
+                        url: "/a/" + $(this).attr("data-redir") + "/",
+                        dataType: "html",
+                        data: {},
+                        success: function (response) {
+                            if (plugin.settings["target"] === "wd-fullscreen") {
+                                $(".as-cover").addClass("wd-fullscreen").attr("data-cover-display", "hidden");
+                                $(".wd-wrapper").addClass("wd-fullscreen");
+                            } else if (plugin.settings["target"] === "wd-main") {
+                                $(".as-cover").removeClass("wd-fullscreen").attr("data-cover-display", "show");
+                                $(".wd-wrapper").removeClass("wd-fullscreen");
+                            }
+                            if (history && history.pushState) {
+//                                console.log("pushed state", {coverDisplay: $(".as-cover").data("cover-display")});
+                                history.pushState({coverDisplay: $(".as-cover").data("cover-display")}, document.title, href);
+                            }
+                            else {
+                                window.location.hash = "!" + $(this).attr("data-redir");
+                            }
+                            $(target).html(response);
+                            NProgress.done();
+                        }
+                    });
                 }
-                $.ajax({
-                    type: "POST",
-                    url: "/a/" + $(this).attr("data-redir") + "/",
-                    dataType: "html",
-                    data: {},
-                    success: function (response) {
-                        $(target).html(response);
-                        NProgress.done();
-                    }
-                });
             });
         };
 
@@ -450,7 +470,8 @@ $(document).ready(function () {
     var target = $(document).find("#wd-main");
     if (history && history.pushState) {
         var loaded = false;
-        $(window).bind("popstate", function () {
+        $(window).bind("popstate", function (e) {
+            console.log("poped state", e.originalEvent.state);
             if (!loaded) {
                 loaded = true;
             } else {
@@ -460,6 +481,13 @@ $(document).ready(function () {
                     window.location.reload();
                 } else {
                     $.post("/a/" + targetUrl, {}, function (response) {
+                        if (e.originalEvent.state == null || e.originalEvent.state["coverDisplay"] === "show") {
+                            $(".as-cover").removeClass("wd-fullscreen").attr("data-cover-display", "show");
+                            $(".wd-wrapper").removeClass("wd-fullscreen");
+                        } else if (e.originalEvent.state["coverDisplay"] === "hidden") {
+                            $(".as-cover").addClass("wd-fullscreen").attr("data-cover-display", "hidden");
+                            $(".wd-wrapper").addClass("wd-fullscreen");
+                        }
                         $(target).html(response);
                         NProgress.done();
                     });
