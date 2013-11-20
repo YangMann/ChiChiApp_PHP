@@ -10,6 +10,7 @@
     <meta name='copyright' content='©2013 交大吃吃'>
     <title><?= $title ?> - 交大吃吃</title>
     <link href='/assets/img/icons/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <link href="/assets/css/chichi-blog.css" type="text/css" rel="stylesheet">
     <link href="/assets/css/chichi-base.css" type="text/css" rel="stylesheet">
     <link href="/assets/css/chichi-common.css" type="text/css" rel="stylesheet">
     <link href="/assets/css/chichi-colors.css" type="text/css" rel="stylesheet">

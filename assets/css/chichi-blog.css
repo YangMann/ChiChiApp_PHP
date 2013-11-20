@@ -1,0 +1,70 @@
+.bl-author-card {
+    position: absolute;
+    width: 160px;
+    right: 60px;
+    border-top: 0;
+    text-align: left;
+    padding: 45px 5px 0 5px;
+}
+
+.bl-author-info .bl-author-name{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color:#333332;
+    line-height: 1.2;
+}
+
+.bl-dateline-info{
+    letter-spacing: normal;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 1.4;
+    color:#666665;
+}
+
+.bl-header-image-wrap{
+    padding: 60px 0 0 0;
+}
+
+.g-r .bl-header-image-wrap img{
+    width: 800px;
+    height: 450px;
+}
+
+.bl-header .bl-meta{
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    color:#b3b3b1;
+    margin-bottom: 5px;
+}
+
+ul.bl-meta{
+    padding: 0;
+}
+
+.bl-meta-item{
+    display: inline;
+}
+
+.bl-content, .bl-content p {
+    font-size: 22px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 1.45;
+}
+
+.bl-title{
+    font-size: 56px;
+}
+
+h1.bl-title{
+    margin: 0 auto;
+}
+
+.bl-content-inner .bl-field p{
+    margin-bottom: 30px;
+}

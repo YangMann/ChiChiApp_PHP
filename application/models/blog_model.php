@@ -26,6 +26,7 @@ class Blog_Model extends CI_Model {
                     $blog['summary'] = $row->summary;
                     $blog['body'] = $row->body;
                     $blog['time'] = $row->time;
+                    $blog['feature_img']=$row->feature_img;
                 }
                 return $blog;
             }
@@ -40,6 +41,7 @@ class Blog_Model extends CI_Model {
                     $blog['summary'][] = $row->summary;
                     $blog['body'][] = $row->body;
                     $blog['time'][] = $row->time;
+                    $blog['feature_img'][]=$row->feature_img;
                 }
                 return $blog;
             }
