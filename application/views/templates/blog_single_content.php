@@ -1,10 +1,7 @@
-<?=
-spl_autoload_register(function($class){
-    require preg_replace('{\\\\|_(?!.*\\\\)}', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
-});
+<?php
+include_once '/Michelf/Markdown.php';
+use Michelf\Markdown;
 
-# Get Markdown class
-use \Michelf\Markdown;
 $text = $blog['body'];
 $html = Markdown::defaultTransform($text);
 ?>

@@ -26,6 +26,9 @@ class Blog_Controller extends CI_Controller {
         $data['stylesheet'] = "";
         $data['script'] = "";
         $data['blog'] = $this->blog_model->get_blogs($blogId);
+        if($blogId!==null) {
+            $data['blog_next']=$this->blog_model->get_blogs($blogId+1);
+        }
         $this->load->view('templates/header', $data);
         $this->load->view('templates/nav', $data);
         if ($blogId !== null) {

@@ -32,8 +32,9 @@ for ($i = 0; $i < $count; $i++) {
             <p><?= $blog['summary'][$i] ?></p>
         </a>
     </article>
-    </div>
-    </div>
+
 <?php
 }
 ?>
+    </div>
+</div>
