@@ -33,7 +33,7 @@ class A extends CI_Controller {
                 $data['stylesheet'] = "";
                 $data['script'] = "";
                 $data['blog'] = $this->blog_model->get_blogs($blogId);
-                if($blogId!==null) {
+                if($blogId!==null ) {
                     $data['blog_next']=$this->blog_model->get_blogs($blogId+1);
                 }
                 if ($blogId !== null) {

@@ -19,7 +19,7 @@
                     Read next
                 </div>
                 <h3 class="bl-preview-title">
-                    <?=$blog_next['title'] ?>
+                    <?=$blog_next['title']?>
                 </h3>
             </div>
             <img class="bl-header-image-cover" src=<?= $blog_next['feature_img']?>>

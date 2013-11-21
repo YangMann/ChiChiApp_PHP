@@ -41,5 +41,4 @@ class Blog_Controller extends CI_Controller {
 
     }
 
-
 }
