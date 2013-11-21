@@ -1,3 +1,14 @@
+<?=
+spl_autoload_register(function($class){
+    require preg_replace('{\\\\|_(?!.*\\\\)}', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
+});
+
+# Get Markdown class
+use \Michelf\Markdown;
+$text = $blog['body'];
+$html = Markdown::defaultTransform($text);
+?>
+
 <div class="bl-header-image-wrap">
     <img class="bl-header-image-contain" src=<?=$blog['feature_img']?> alt width="800" height="450">
 </div>
@@ -17,7 +28,7 @@
             </h1>
         </header>
         <div class="bl-field">
-            <p><?= $blog['body'] ?></p>
+            <?= $html ?>
         </div>
     </div>
 </div>
