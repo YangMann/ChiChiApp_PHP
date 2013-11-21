@@ -1455,3 +1455,8 @@ h1.bl-title{
 .bl-content-inner .bl-field p{
     margin-bottom: 30px;
 }
+
+.bl-content .bl-field img {
+    display: block;
+    margin:auto;
+}
