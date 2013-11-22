@@ -140,6 +140,7 @@
    *       minimum: 0.1
    *     });
      */
+
     NProgress.configure = function (options) {
         $.extend(Settings, options);
         return this;
