@@ -10,7 +10,7 @@ define("GOOGLE_API_KEY", "AIzaSyA4g71gAcTsRnmIE78n9iSdlvTqwLDCAcM");
 define("GOOGLE_GCM_URL", "https://android.googleapis.com/gcm/send");
 require_once 'HttpClient.class.php';
 
-class Gcm extends CI_Controller {
+class Controller_Gcm extends CI_Controller {
 
     function __construct() {
         parent::__construct();

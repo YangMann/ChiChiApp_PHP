@@ -1,7 +1,7 @@
 <?php
 //echo 'pages/blog<br>';
 $count = count($blog['id']);
-//echo $count;
+///echo $count;
 ?>
 <div class="wd-inner">
     <div class="bl-list">
@@ -32,8 +32,9 @@ for ($i = 0; $i < $count; $i++) {
             <p><?= $blog['summary'][$i] ?></p>
         </a>
     </article>
-    </div>
-    </div>
+
 <?php
 }
 ?>
+    </div>
+</div>
