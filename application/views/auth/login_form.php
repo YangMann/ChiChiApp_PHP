@@ -84,9 +84,11 @@ $captcha = array(
                 <?php echo $recaptcha_html; ?>
             </div>
         <?php } else { ?>
-            <div>
-                <div>
-                    <p>Enter the code exactly as it appears:</p>
+            <div class="fm-group g-r">
+                <div class="u-1-4">
+                    <label>验证码</label>
+                </div>
+                <div class="u-3-4">
                     <?php echo $captcha_html; ?>
                 </div>
             </div>
