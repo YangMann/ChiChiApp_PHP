@@ -2123,7 +2123,7 @@ h1.bl-title{
 
 .bl-background-size-cover .bl-header-image-cover {
     width: 100%;
-    height: 550px;
+    /*height: 550px;*/
 }
 
 .bl-preview .bl-preview-content {
@@ -2166,6 +2166,19 @@ h1.bl-title{
     line-height: 1;
 
 }
+
+ul.bl-genre-list {
+    list-style-type: none;
+    margin-left: -40px;
+    overflow: hidden;
+}
+
+ul.bl-genre-list li{
+    float: left;
+    margin-right: 1px;
+}
+
+
 
 .fm-wrapper {
     margin-left: 0;
