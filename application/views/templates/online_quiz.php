@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <script type="text/javascript" src="/assets/js/libs/jquery/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="/assets/js/quiz_jquery.js"></script>
-
-</head>
-<body>
+<script type="text/javascript" src="/assets/js/quiz_jquery.js"></script>
 <?php
 echo 'Question ' . $question_id . '<br />';
 echo $question . '<br />';
@@ -42,11 +34,13 @@ $all_answers = $this->questions_model->get_answers($user_id);
 $all_questions = $this->questions_model->get_questions();
 foreach ($all_questions as $item) {
     echo "Question id: " . $item['id'] . "<br />";
+    echo "Score: " . $item['score'] . "<br />";
+    echo "Genre: " . $item['genre'] . "<br />";
     echo "is_answer_or_not: ";
     if ($this->questions_model->is_answer_empty($user_id, $item['id'])) {
         echo "FALSE<br />";
-    } else echo "Answer: " . $all_answers[$item['id'] - 1]['answer'] . "<br /><br />";
-    echo "Question: " . $item['question'] . "<br />";
+    } else echo "Answer: " . $all_answers[$item['id'] - 1]['answer'] . "<br />";
+    echo "Question: " . $item['question'] . "<br /><br />";
 
 }
 ?>
