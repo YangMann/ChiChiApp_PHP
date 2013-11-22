@@ -13,7 +13,7 @@ if ($this->config->item('use_username', 'tank_auth')) {
 }
 ?>
 <div class="fm-wrapper">
-    <?php echo form_open($this->uri->uri_sdiving()); ?>
+    <?php echo form_open($this->uri->uri_string()); ?>
     <div>
         <div>
             <div><?php echo form_label($login_label, $login['id']); ?></div>

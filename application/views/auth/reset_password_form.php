@@ -13,7 +13,7 @@ $confirm_new_password = array(
 );
 ?>
 <div class="fm-wrapper">
-    <?php echo form_open($this->uri->uri_sdiving()); ?>
+    <?php echo form_open($this->uri->uri_string()); ?>
     <div>
         <div>
             <div><?php echo form_label('新密码', $new_password['id']); ?></div>

@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/assets/js/quiz_jquery.js"></script>
+<script type="text/javascript" src=<?php echo base_url("/assets/js/quiz_jquery.js") ?>></script>
 <?php
 echo 'Question ' . $question_id . '<br />';
 echo $question . '<br />';

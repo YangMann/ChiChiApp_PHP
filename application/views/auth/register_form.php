@@ -36,7 +36,7 @@ $captcha = array(
 );
 ?>
 <div class="fm-wrapper">
-    <?php echo form_open($this->uri->uri_sdiving()); ?>
+    <?php echo form_open($this->uri->uri_string()); ?>
     <div>
         <?php if ($use_username) { ?>
         <div>
@@ -61,7 +61,7 @@ $captcha = array(
             <div style="color: red;"><?php echo form_error($confirm_password['name']); ?></div>
         </div>
 
-        <?php if ($captcha_regisdivation) {
+        <?php if ($captcha_registration) {
             if ($use_recaptcha) { ?>
         <div>
             <div colspan="2">
