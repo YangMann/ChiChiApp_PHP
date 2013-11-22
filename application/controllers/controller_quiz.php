@@ -29,14 +29,22 @@ class Controller_Quiz extends CI_Controller {
         $data['question_id'] = $question_id;
         $data['former_question_id'] = $former_question_id;
         $data['next_question_id'] = $next_question_id;
+        $data['post_question_id'] = $question_id;
 
         $question = $this->questions_model->get_question($question_id);
         $data['question'] = $question[0]['question'];
 
         if ($this->input->post()) {
-            $data['answer'] = $_POST['answer'];
-            $answer = $data['answer'];
-            $this->questions_model->answer($user_id, $former_question_id, $answer);
+            if ($_POST['direction'] === 'back') {
+                $data['answer'] = $_POST['post_former_answer'];
+                $answer = $data['answer'];
+                $this->questions_model->answer($user_id, $next_question_id, $answer);
+            } else if ($_POST['direction'] === 'next') {
+                $data['answer'] = $_POST['post_next_answer'];
+                $answer = $data['answer'];
+                $this->questions_model->answer($user_id, $former_question_id, $answer);
+            }
+
         } else {
             $data['answer'] = '';
         }
@@ -55,6 +63,10 @@ class Controller_Quiz extends CI_Controller {
 //            $this->load->view('online_quiz', $data);
 //        }
 
+    }
+
+    public function mark($user_id, $question_id)
+    {
 
     }
 }
