@@ -93,7 +93,7 @@ $captcha = array(
                 </div>
             </div>
             <div class="fm-group g-r">
-                <div class="u-1-4"><?php echo form_label('验证码', $captcha['id']); ?></div>
+                <div class="u-1-4"><?php echo form_label('输入图中文字', $captcha['id']); ?></div>
                 <div class="u-3-4"><?php echo form_input($captcha); ?></div>
                 <div style="color: red;"><?php echo form_error($captcha['name']); ?></div>
             </div>
