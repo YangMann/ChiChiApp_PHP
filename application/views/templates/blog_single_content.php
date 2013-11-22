@@ -44,7 +44,7 @@ $html = Markdown::defaultTransform($text);
 
 <footer class="bl-footer">
     <div class="bl-preview">
-        <a href="/blog/<?= $blog_next['id']?>" data-redir="blog/<?= $blog_next['id']?>" class="bl-background-size-cover">
+        <a href="/blog/<?= $blog_next['id']?>" data-redir="blog/<?= $blog_next['id']?>" data-redir-target="wd-fullscreen" class="bl-background-size-cover">
             <div class="bl-preview-content">
                 <div class="bl-preview-description">
                     Read next
