@@ -387,6 +387,9 @@
     "use strict";
 
     $.redir = function (elements, index, options) {
+        $(".bl-background-size-cover").click(function(){
+            $(document).scrollTop(0);
+        });
         var defaults = {},
             plugin = this,
             target = $(document).find("#wd-main"),
@@ -468,7 +471,6 @@
 $(document).ready(function () {
 
     "use strict";
-
     var target = $(document).find("#wd-main");
     if (history && history.pushState) {
         var loaded = false;

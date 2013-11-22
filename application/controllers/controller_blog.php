@@ -23,6 +23,7 @@ class Controller_Blog extends CI_Controller {
 
     function view($blogId=null) {
         $data['title'] = "博客";
+        $data['blogId']=$blogId;
         $data['stylesheet'] = "";
         $data['script'] = "";
         $data['is_logged_in'] = $this->tank_auth->is_logged_in();
@@ -33,7 +34,7 @@ class Controller_Blog extends CI_Controller {
         }
         $this->load->view('templates/header', $data);
         $this->load->view('templates/nav', $data);
-        if ($blogId !== null) {
+        if ($blogId !== null && $blogId!="c") {
             $this -> load -> view('templates/blog_single', $data);
         } else {
            # print_r($data);

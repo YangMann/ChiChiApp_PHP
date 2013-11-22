@@ -8,12 +8,12 @@ $count = count($blog['id']);
     <div class="bl-list-header">
         <nav class="bl-sort">
             <h5 class="bl-sort-header bl-sort-header-active">
-                <a href="/" title="博客列表">
+                <a href="/" data-redir="blog" title="博客列表">
                     <span class="bl-sort-title">博客列表</span>
                 </a>
             </h5>
             <h5 class="bl-sort-header">
-                <a href="/" title="分类">
+                <a href="/" data-redir="blog/c" title="分类">
                     <span class="bl-sort-title">分类</span>
                 </a>
             </h5>

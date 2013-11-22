@@ -15,7 +15,7 @@ class Blog_Model extends CI_Model {
     // return $blog[]
     public function get_blogs($blogId) {
         $blog = array();
-        if ($blogId !== null) {
+        if ($blogId !== null && $blogId!="c") {
             $query = $this->db->get_where('blog', array('id' => $blogId));
             if ($query->num_rows() == 1) {
                 foreach ($query->result() as $row) {
