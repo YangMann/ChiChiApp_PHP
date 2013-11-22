@@ -9,11 +9,11 @@
     <meta name='author' content='交大吃吃信息中心'>
     <meta name='copyright' content='©2013 交大吃吃'>
     <title><?= $title ?> - 交大吃吃</title>
-    <link href='/assets/img/icons/favicon.ico' rel='shortcut icon' type='image/x-icon'>
-    <link href="/assets/css/chichi-base.css" type="text/css" rel="stylesheet">
-    <link href="/assets/css/chichi-common.css" type="text/css" rel="stylesheet">
-    <link href="/assets/css/chichi-colors.css" type="text/css" rel="stylesheet">
-<!--    <link href="/assets/css/chichi-form.css" type="text/css" rel="stylesheet">-->
+    <link href=<?php echo base_url('/assets/img/icons/favicon.ico') ?> rel='shortcut icon' type='image/x-icon'>
+    <link href=<?php echo base_url("/assets/css/chichi-base.css") ?> type="text/css" rel="stylesheet">
+    <link href=<?php echo base_url("/assets/css/chichi-common.css") ?> type="text/css" rel="stylesheet">
+    <link href=<?php echo base_url("/assets/css/chichi-colors.css") ?> type="text/css" rel="stylesheet">
+<!--    <link href=<?php echo base_url("/assets/css/chichi-form.css") ?> type="text/css" rel="stylesheet">-->
     <?= $stylesheet ?>
 </head>
 <body>

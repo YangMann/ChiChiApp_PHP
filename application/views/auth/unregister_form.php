@@ -5,13 +5,15 @@ $password = array(
 	'size'	=> 30,
 );
 ?>
-<?php echo form_open($this->uri->uri_string()); ?>
-<table>
-	<tr>
-		<td><?php echo form_label('Password', $password['id']); ?></td>
-		<td><?php echo form_password($password); ?></td>
-		<td style="color: red;"><?php echo form_error($password['name']); ?><?php echo isset($errors[$password['name']])?$errors[$password['name']]:''; ?></td>
-	</tr>
-</table>
-<?php echo form_submit('cancel', 'Delete account'); ?>
+<div class="fm-wrapper">
+    <?php echo form_open($this->uri->uri_string()); ?>
+    <div>
+        <div>
+            <div><?php echo form_label('密码', $password['id']); ?></div>
+            <div><?php echo form_password($password); ?></div>
+            <div style="color: red;"><?php echo form_error($password['name']); ?><?php echo isset($errors[$password['name']])?$errors[$password['name']]:''; ?></div>
+        </div>
+    </div>
+</div>
+<?php echo form_submit('cancel', '删除账户'); ?>
 <?php echo form_close(); ?>
