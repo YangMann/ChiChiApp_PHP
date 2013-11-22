@@ -20,8 +20,8 @@
             } else {
                 ?>
                 <div class="as-cover-actions">
-                    <a class="bt bt-success bt-block" data-redir="auth/login" data-redir-target="wd-main"
-                       href="/auth/login">吃吃的大冒险</a>
+                    <a class="bt bt-success bt-block" data-redir="adventure/questions/1" data-redir-target="wd-main"
+                       href="/adventure/questions/1">吃吃的大冒险</a>
                 </div>
             <?php
             }

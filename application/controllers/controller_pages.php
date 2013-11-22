@@ -1,4 +1,5 @@
 <?php require "controller_blog.php";
+require "controller_quiz.php";
 /**
  * Created by PhpStorm.
  * User: JeffreyZhang
@@ -43,6 +44,13 @@ class Controller_Pages extends CI_Controller {
                // $data['blog'] = $this->blog_model->get_blogs(null);
                 Controller_Blog::view(null);
 
+                break;
+            case 'adventure':
+                $data['title'] = "吃吃大冒险";
+                $this->load->view('templates/header', $data);
+                $this->load->view('templates/nav', $data);
+                Controller_Quiz::questions(1);
+                $this->load->view('templates/footer', $data);
                 break;
             case 'gcm':
                 $data['title'] = 'GCM';

@@ -27,8 +27,8 @@
                         <a class="nv-icon nv-icon-archive" data-redir="blog" data-redir-target="wd-main" href="/blog">吃货日志</a>
                     </li>
                     <li>
-                        <a class="nv-icon nv-icon-earth" data-redir="adventure" data-redir-target="wd-main"
-                           href="/adventure">吃吃的大冒险</a>
+                        <a class="nv-icon nv-icon-earth" data-redir="adventure/questions/1" data-redir-target="wd-main"
+                           href="/adventure/questions/1">吃吃的大冒险</a>
                     </li>
                     <!--<li>
                         <a class="nv-icon nv-icon-download">包含二级菜单</a>

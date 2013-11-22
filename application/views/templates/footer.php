@@ -7,7 +7,8 @@
 <script type="text/javascript">
     new NvMenu(document.getElementById('nv-menu'), {});
 </script>
-<script type="text/javascript" src=<?php echo base_url("/assets/js/app/ng/main.js") ?>>></script>
+<script type="text/javascript" src=<?php echo base_url("/assets/js/app/ng/main.js") ?>></script>
+<script type="text/javascript" src="/assets/js/quiz_jquery.js"></script>
 <?= $script ?>
 </body>
 </html>
