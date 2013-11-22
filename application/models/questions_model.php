@@ -21,11 +21,8 @@ class questions_model extends CI_Model {
     public function get_questions() {
         return $this->db->get('adventure_questions')->result_array();
     }
+
     public function get_question($question_id) {
-//        $this->db->select('id, question, score, genre, answer');
-//        $this->db->from('adventure_questions');
-//        $this->db->where('id', $question_id);
-//        return $this->db->get()->result_array();
         $sql = "SELECT * FROM adventure_questions WHERE id=" . $this->db->escape($question_id);
         $query = $this->db->query($sql);
         return $query->result_array();
@@ -53,6 +50,24 @@ class questions_model extends CI_Model {
         $this->db->query($sql);
     }
 
+    public function get_answers($user_id)
+    {
+        $sql = "SELECT * FROM users_answers WHERE user_id=" . $this->db->escape($user_id);
+        $query = $this->db->query($sql);
+        $result = $query->result_array();
+        return $result;
+    }
+
+    public function get_answer($user_id, $question_id)
+    {
+        $sql = "SELECT * FROM users_answers WHERE user_id=" . $this->db->escape($user_id) . " AND answer_id=" . $this->db->escape($question_id);
+        $query = $this->db->query($sql);
+        $result = $query->result_array();
+        if ($result) {
+            return $result[0]['answer'];
+        } else return NULL;
+    }
+
     public function answer($user_id, $answer_id, $answer)
     {
         if (questions_model::is_answer_empty($user_id, $answer_id)) {
@@ -60,5 +75,12 @@ class questions_model extends CI_Model {
         } else {
             questions_model::update_answer($user_id, $answer_id, $answer);
         }
+    }
+
+    public function mark($user_id, $question_id)
+    {
+        $sql = "SELECT * FROM users_answers WHERE user_id=" . $this->db->escape($user_id) . " AND answer_id=" . $this->db->escape($question_id);
+        $query = $this->db->query($sql);
+        $result = $query->result_array();
     }
 }
