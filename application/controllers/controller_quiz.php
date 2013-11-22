@@ -25,6 +25,9 @@ class Controller_Quiz extends CI_Controller {
 
         $former_question_id = $question_id - 1;
         $next_question_id = $question_id + 1;
+        $data['is_logged_in'] = $this->tank_auth->is_logged_in();
+        $data['stylesheet'] = "";
+        $data['script'] = "";
         $data['user_id'] = $user_id;
         $data['question_id'] = $question_id;
         $data['former_question_id'] = $former_question_id;
@@ -33,6 +36,8 @@ class Controller_Quiz extends CI_Controller {
 
         $question = $this->questions_model->get_question($question_id);
         $data['question'] = $question[0]['question'];
+        $data['question_score'] = $question[0]['score'];
+        $data['question_genre'] = $question[0]['genre'];
 
         if ($this->input->post()) {
             if ($_POST['direction'] === 'back') {
