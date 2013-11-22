@@ -69,6 +69,13 @@ $next_question = $this->questions_model->get_question($next_question_id);
                     }?>
                 </div>
                 <div class="u-3-5">
+                    <?php
+                    if (!$next_question) {
+                        ?>
+                        <div class="qz-finish-logo"></div>
+                    <?php
+                    }
+                    ?>
 
 
                 </div>
@@ -97,7 +104,11 @@ $next_question = $this->questions_model->get_question($next_question_id);
                             echo form_close();
                         }
                     } else {
-                        echo "complete";
+                        ?>
+                        <p class="qz-finish-prompt">
+                            回答完毕！晚上11:00之前可以随意修改答案~
+                        </p>
+                    <?php
                     }
                     ?>
 
@@ -111,7 +122,7 @@ $next_question = $this->questions_model->get_question($next_question_id);
         <?php
         $all_answers = $this->questions_model->get_answers($user_id);
         $all_questions = $this->questions_model->get_questions();
-        for ($i = 0; $i < sizeof($all_questions); $i++) {
+        for ($i = 0; $i < sizeof($all_questions) - 1; $i++) {
             if ($i % 3 === 0) {
                 ?>
                 <div class="g-r">
@@ -150,7 +161,7 @@ $next_question = $this->questions_model->get_question($next_question_id);
                         <div class="u-1">
                             <div class="qz-card-input-group">
                                 <textarea class="fm-control" id='answer'
-                                          disabled><?= Markdown::defaultTransform($all_answers[$i]['answer']) ?></textarea>
+                                          disabled><?= $all_answers[$i]['answer']?></textarea>
                             </div>
                         </div>
                     </div>
