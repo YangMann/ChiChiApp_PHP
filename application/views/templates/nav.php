@@ -15,7 +15,7 @@
                     if ($is_logged_in) {
                         ?>
                         <li>
-                            <a class="nv-icon nv-icon-earth">已登陆</a>
+                            <a class="nv-icon nv-icon-earth"><?= $username ?></a>
                         </li><?php
                     } else {
                         ?>
