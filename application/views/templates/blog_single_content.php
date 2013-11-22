@@ -20,7 +20,7 @@ $html = Markdown::defaultTransform($text);
                 <ul class="bl-meta">
                     <li class="bl-meta-item">
                         <span class="bl-divider-word">in</span>
-                        <a href="/"><?=$blog['genre'] ?></a>
+                        <a><?=$blog['genre'] ?></a>
                     </li>
                 </ul>
             </header>
