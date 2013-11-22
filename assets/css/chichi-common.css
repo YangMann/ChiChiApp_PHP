@@ -1810,7 +1810,7 @@ input.nv-search:focus {
 }
 
 .as-cover-img {
-    background-image: url("/assets/img/bgs/001.jpg");
+    background-image: url("/assets/img/bgs/000.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -1824,7 +1824,7 @@ input.nv-search:focus {
 }
 
 .as-cover-img-b {
-    background-image: url("/assets/img/bgs/001b.jpg");
+    background-image: url("/assets/img/bgs/000b.jpg");
     -webkit-transition: opacity ease-in-out 0.3s;
     -moz-transition: opacity ease-in-out 0.3s;
     -ms-transition: opacity ease-in-out 0.3s;

@@ -14,7 +14,9 @@
                 <div class="as-cover-actions">
                     <a class="bt bt-default" data-redir="auth/login" data-redir-target="wd-main"
                        href="/auth/login">帐号登陆</a>
-                    <a class="bt bt-primary" href="/auth/connect/session/renren">人人登陆</a>
+                    <?php
+                    // <a class="bt bt-primary" href="/auth/connect/session/renren">人人登陆</a>
+                    ?>
                 </div>
             <?php
             } else {
