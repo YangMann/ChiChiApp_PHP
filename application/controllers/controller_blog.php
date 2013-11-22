@@ -6,7 +6,7 @@
  * Time: 下午11:43
  */
 
-class Blog_Controller extends CI_Controller {
+class Controller_Blog extends CI_Controller {
 
     function __construct() {
         parent::__construct();

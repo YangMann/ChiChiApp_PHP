@@ -12,12 +12,12 @@ class questions_model extends CI_Model {
         $this->load->database();
     }
     public function get_questions() {
-        return $this->db->get('questions_table')->result_array();
+        return $this->db->get('adventure_questions')->result_array();
     }
     public function get_question($question_id) {
-        $this->db->select('question_id, description');
-        $this->db->from('questions_table');
-        $this->db->where('question_id', $question_id);
+        $this->db->select('id, question, score, genre, answer');
+        $this->db->from('adventure_questions');
+        $this->db->where('id', $question_id);
         return $this->db->get()->result_array();
     }
 }
