@@ -38,6 +38,7 @@
 |
 */
 $route['auth']                  = 'controller_auth';
+$route['auth/connect/(:any)']   = 'controller_connect/$1/$2';
 $route['auth/(:any)']           = 'controller_auth/$1';
 $route['quiz/questions/(:any)'] = 'controller_quiz/questions/$1';
 $route['gcm/(:any)']            = 'controller_gcm/send_gcm_notify/$1';
