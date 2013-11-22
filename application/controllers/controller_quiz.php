@@ -6,17 +6,14 @@
  * Time: 2:17 PM
  */
 
-class Controller_Quiz extends CI_Controller
-{
+class Controller_Quiz extends CI_Controller {
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct();
         $this->load->library('tank_auth');
     }
 
-    public function questions($question_id)
-    {
+    public function questions($question_id) {
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         $this->load->model('questions_model');
@@ -82,8 +79,7 @@ class Controller_Quiz extends CI_Controller
 
     }
 
-    public function questions_($question_id)
-    {
+    public function questions_($question_id) {
 
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
@@ -134,8 +130,7 @@ class Controller_Quiz extends CI_Controller
         $this->load->view('templates/footer', $data);
     }
 
-    public function mark($user_id, $question_id)
-    {
+    public function mark($user_id, $question_id) {
 
     }
 }
