@@ -1,5 +1,5 @@
 <?php
-include_once '/Michelf/Markdown.php';
+include_once 'Michelf/Markdown.php';
 use Michelf\Markdown;
 
 $text = $blog['body'];

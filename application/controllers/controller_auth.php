@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Controller_Auth extends CI_Controller {
     function __construct() {
         parent::__construct();
 
@@ -66,7 +66,7 @@ class Auth extends CI_Controller {
                     $data['login_by_username'],
                     $data['login_by_email'])
                 ) { // success
-                    redirect('admin');
+                    redirect('');
 
                 } else {
                     $errors = $this->tank_auth->get_error_message();
@@ -571,5 +571,5 @@ class Auth extends CI_Controller {
 
 }
 
-/* End of file auth.php */
-/* Location: ./application/controllers/auth.php */
+/* End of file controller_auth.php */
+/* Location: ./application/controllers/controller_auth.php */

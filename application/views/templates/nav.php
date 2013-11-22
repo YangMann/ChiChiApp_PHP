@@ -11,16 +11,32 @@
                     <!--<li>
                         <a class="nv-icon nv-icon-earth">jAccount登陆</a>
                     </li>-->
+                    <?php
+                    if ($is_logged_in) {
+                        ?>
+                        <li>
+                            <a class="nv-icon nv-icon-earth">已登陆</a>
+                        </li><?php
+                    } else {
+                        ?>
+                        <li>
+                            <a class="nv-icon nv-icon-earth">登陆</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
                     <li>
-                        <a class="nv-icon nv-icon-article" data-redir="home" data-redir-target="wd-main" href="/home">主页</a>
+                        <a class="nv-icon nv-icon-article" data-redir="home" data-redir-target="wd-main"
+                           href="/home">主页</a>
                     </li>
                     <li>
                         <a class="nv-icon nv-icon-archive" data-redir="blog" data-redir-target="wd-main" href="/blog">吃货日志</a>
                     </li>
                     <li>
-                        <a class="nv-icon nv-icon-earth" data-redir="adventure" data-redir-target="wd-main" href="/adventure">吃吃的大冒险</a>
+                        <a class="nv-icon nv-icon-earth" data-redir="adventure" data-redir-target="wd-main"
+                           href="/adventure">吃吃的大冒险</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a class="nv-icon nv-icon-download">包含二级菜单</a>
                         <ul class="nv-sub-menu">
                             <li><a class="nv-icon nv-icon-illustrator">二级菜单</a></li>
@@ -32,7 +48,7 @@
                     </li>
                     <li>
                         <a class="nv-icon nv-icon-help">帮助</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </nav>

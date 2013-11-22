@@ -6,7 +6,7 @@
  * Time: 下午4:24
  */
 
-class A extends CI_Controller {
+class Controller_A extends CI_Controller {
     // AJAX Handler
     public function __construct() {
         parent::__construct();

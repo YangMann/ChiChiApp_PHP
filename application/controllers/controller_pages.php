@@ -1,4 +1,4 @@
-<?php require "blog_controller.php";
+<?php require "controller_blog.php";
 /**
  * Created by PhpStorm.
  * User: JeffreyZhang
@@ -6,7 +6,14 @@
  * Time: 下午6:38
  */
 
-class Pages extends CI_Controller {
+class Controller_Pages extends CI_Controller {
+
+    public function __construct() {
+        parent::__construct();
+
+        $this->load->helper('url');
+        $this->load->library('tank_auth');
+    }
 
     public function view($page = 'home') {
 
@@ -17,6 +24,7 @@ class Pages extends CI_Controller {
         $data['title'] = "";
         $data['stylesheet'] = "";
         $data['script'] = "";
+        $data['is_logged_in'] = $this->tank_auth->is_logged_in();
         $this->load->model('blog_model');
 
         switch ($page) {
@@ -32,7 +40,7 @@ class Pages extends CI_Controller {
                 $this->load->helper('url');
                 $this->load->library('tank_auth');
                // $data['blog'] = $this->blog_model->get_blogs(null);
-                Blog_Controller::view(null);
+                Controller_Blog::view(null);
 
                 break;
             case 'gcm':
