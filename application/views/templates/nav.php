@@ -20,7 +20,7 @@
                     } else {
                         ?>
                         <li>
-                            <a class="nv-icon nv-icon-earth">登陆</a>
+                            <a class="nv-icon nv-icon-earth" data-redir="auth/login" data-redir-target="wd-main" href="/auth/login">登陆</a>
                         </li>
                     <?php
                     }
@@ -49,6 +49,13 @@
                     <li>
                         <a class="nv-icon nv-icon-help">帮助</a>
                     </li>-->
+                    <?php
+                    if ($is_logged_in) {
+                        ?>
+                        <li>
+                        <a class="nv-icon nv-icon-earth" data-redir="auth/logout" data-redir-target="wd-main" href="/auth/logout">登出</a>
+                        </li><?php
+                    } ?>
                 </ul>
             </div>
         </nav>

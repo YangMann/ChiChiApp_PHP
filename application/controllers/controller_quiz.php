@@ -6,16 +6,26 @@
  * Time: 2:17 PM
  */
 
-class Controller_Quiz extends CI_Controller
-{
-    public function questions($question_id)
-    {
+class Controller_Quiz extends CI_Controller {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->library('tank_auth');
+    }
+
+    public function questions($question_id) {
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         $this->load->model('questions_model');
+        if (!$this->tank_auth->is_logged_in()) {
+            redirect('');
+        }
+        $user_id = $this->tank_auth->get_user_id();
+        $data['username'] = $this->tank_auth->get_username();
 
         $former_question_id = $question_id - 1;
         $next_question_id = $question_id + 1;
+        $data['user_id'] = $user_id;
         $data['question_id'] = $question_id;
         $data['former_question_id'] = $former_question_id;
         $data['next_question_id'] = $next_question_id;
@@ -26,7 +36,7 @@ class Controller_Quiz extends CI_Controller
         if ($this->input->post()) {
             $data['answer'] = $_POST['answer'];
             $answer = $data['answer'];
-            $this->questions_model->answer(1, $former_question_id, $answer);
+            $this->questions_model->answer($user_id, $former_question_id, $answer);
         } else {
             $data['answer'] = '';
         }
