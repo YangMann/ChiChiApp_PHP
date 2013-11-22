@@ -6,7 +6,7 @@
  * Time: 下午4:24
  */
 
-class Controller_A extends CI_Controller {
+class Controller_Base extends CI_Controller {
     // AJAX Handler
     public function __construct() {
         parent::__construct();
@@ -15,19 +15,30 @@ class Controller_A extends CI_Controller {
         $this->load->library('tank_auth');
     }
 
-    function index($page = null) {
+    function index($page = null, $para = null) {
         $data['title'] = "";
         $data['stylesheet'] = "";
         $data['script'] = "";
         $data['is_logged_in'] = $this->tank_auth->is_logged_in();
         $data['username'] = $this->tank_auth->get_username();
-        switch($page){
-            case "login":
-                $this->load->view('templates/header', $data);
-                $this->load->view('templates/nav', $data);
-                break;
-            default;
-        }
+        $data['page'] = $page + "/" + $para;
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/nav', $data);
+        //$this->load->view('pages/base', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
+    function auth($page){
+        $data['title'] = "";
+        $data['stylesheet'] = "";
+        $data['script'] = "";
+        $data['is_logged_in'] = $this->tank_auth->is_logged_in();
+        $data['username'] = $this->tank_auth->get_username();
+        $data['page'] = "a/auth/".$page;
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/nav', $data);
+        $this->load->view('pages/base', $data);
+        $this->load->view('templates/footer', $data);
     }
 
     function blog($blogId = null) {
