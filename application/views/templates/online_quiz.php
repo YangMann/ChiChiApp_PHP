@@ -40,14 +40,14 @@ bel><input type='hidden' name='post_next_answer' id='post_next_answer'></label>"
 echo "<br />";
 $all_answers = $this->questions_model->get_answers($user_id);
 $all_questions = $this->questions_model->get_questions();
-foreach ($all_answers as $item) {
-    echo "Question id: " . $item['answer_id'] . "<br />";
+foreach ($all_questions as $item) {
+    echo "Question id: " . $item['id'] . "<br />";
     echo "is_answer_or_not: ";
-    if ($this->questions_model->is_answer_empty($user_id, $item['answer_id'])) {
+    if ($this->questions_model->is_answer_empty($user_id, $item['id'])) {
         echo "FALSE<br />";
-    } else echo "TRUE<br />";
-    echo "Question: " . $all_questions[$item['answer_id'] - 1]['question'] . "<br />";
-    echo "Answer: " . $item['answer'] . "<br /><br />";
+    } else echo "Answer: " . $all_answers[$item['id'] - 1]['answer'] . "<br /><br />";
+    echo "Question: " . $item['question'] . "<br />";
+
 }
 ?>
 </body>
