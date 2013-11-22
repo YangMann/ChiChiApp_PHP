@@ -3,7 +3,10 @@
  */
 $(document).ready(function(){
     $(window).resize(function(){
-        $(".u-2-3").css("width", $(window).width()-$(".u-1-3").width());
+        if($(window).width()>=767)
+            $(".u-2-3").css("width", $(window).width()-$(".u-1-3").width());
+        else
+            $(".u-2-3").css("width", $(window).width());
     });
     $(window).resize();
 });
