@@ -14,7 +14,8 @@ class questions_model extends CI_Model {
 
     public function is_question_empty($question_id)
     {
-        if (get_question($question_id)) return FALSE;
+        $result = get_question($question_id);
+        if ($result) return FALSE;
         else return TRUE;
     }
 

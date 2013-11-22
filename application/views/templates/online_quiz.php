@@ -2,32 +2,50 @@
 include_once 'Michelf/Markdown.php';
 use Michelf\Markdown;
 
+?>
+<script type="text/javascript" src="/assets/js/quiz_jquery.js"></script>
+<?php
 $old_answer = ($this->questions_model->get_answer($user_id, $question_id));
+$next_question = $this->questions_model->get_question($next_question_id);
 ?>
 <div class="wd-inner">
     <div class="g-r">
         <div class="qz-current-question-wrapper u-1-2">
             <div class="g">
                 <div class="u-1">
-                    <div class="qz-current-question-num">
-                        <?= $question_id ?>
-                    </div>
-                    <div class="qz-current-question-score">
-                        <?= $question_score ?>
-                    </div>
+                    <?php if ($next_question) {
+                        ?>
+                        <div class="qz-current-question-num">
+                            <?php echo $question_id;
+                            ?>
+                        </div>
+                    <?php
+                    }
+                    if ($next_question) {
+                        ?>
+                        <div class="qz-current-question-score">
+                            <?php if ($next_question) echo $question_score ?>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
             <div class="qz-current-question-genre">
-                <?= $question_genre ?>
+                <?php if ($next_question) echo $question_genre ?>
             </div>
             <article class="qz-current-question">
-                <?= Markdown::defaultTransform($question) ?>
+                <?php if ($next_question) echo Markdown::defaultTransform($question) ?>
             </article>
 
             <div class="g">
                 <div class="u-1">
                     <div class="qz-input-group">
-                        <textarea class="fm-control" type='text' id='answer'><?= $old_answer ?></textarea>
+                        <?php if ($next_question) {
+                            ?>
+                            <textarea class="fm-control" type='text' id='answer'><?= $old_answer ?></textarea>
+                        <?php
+                        } ?>
                     </div>
                 </div>
             </div>
@@ -37,14 +55,17 @@ $old_answer = ($this->questions_model->get_answer($user_id, $question_id));
 
                     <?php
 
-                    if ($this->questions_model->get_question($former_question_id)) {
-                        echo form_open('adventure/questions/' . $former_question_id);
-                        ?>
-                        <input type='hidden' name='direction' value='back'>
-                        <input type='hidden' name='post_former_answer' id='post_former_answer'>
-                        <button class="bt bt-block bt-default" type='submit' id='post_former_answer_button'>上一题</button>
-                        <?php
-                        echo form_close();
+                    if ($next_question) {
+                        if ($this->questions_model->get_question($former_question_id)) {
+                            echo form_open('adventure/questions/' . $former_question_id);
+                            ?>
+                            <input type='hidden' name='direction' value='back'>
+                            <input type='hidden' name='post_former_answer' id='post_former_answer'>
+                            <button class="bt bt-block bt-default" type='submit' id='post_former_answer_button'>上一题
+                            </button>
+                            <?php
+                            echo form_close();
+                        }
                     }?>
                 </div>
                 <div class="u-3-5">
@@ -53,16 +74,33 @@ $old_answer = ($this->questions_model->get_answer($user_id, $question_id));
                 </div>
                 <div class="u-1-5">
                     <?php
-                    if ($this->questions_model->get_question($next_question_id)) {
-                        echo form_open('adventure/questions/' . $next_question_id);
-                        ?>
-                        <input type='hidden' name='direction' value='next'>
-                        <input type='hidden' name='post_next_answer' id='post_next_answer'>
-                        <button class='bt bt-block bt-success' type='submit' id='post_next_answer_button'>下一题</button>
-                        <?php
-                        echo form_close();
+                    //                    $next_question = $this->questions_model->get_question($next_question_id);
+                    if ($next_question) {
+                        if (!$next_question[0]['question']) {
+                            echo form_open('adventure/questions/52');
+                            ?>
+                            <input type='hidden' name='direction' value='end'>
+                            <input type='hidden' name="former_question_id" value="<?= $question_id ?>">
+                            <input type='hidden' name='post_next_answer' id='post_next_answer'>
+                            <button class='bt bt-block bt-success' type='submit' id='post_next_answer_button'>完成
+                            </button>
+                            <?php
+                            echo form_close();
+                        } else {
+                            echo form_open('adventure/questions/' . $next_question_id);
+                            ?>
+                            <input type='hidden' name='direction' value='next'>
+                            <input type='hidden' name='post_next_answer' id='post_next_answer'>
+                            <button class='bt bt-block bt-success' type='submit' id='post_next_answer_button'>下一题
+                            </button>
+                            <?php
+                            echo form_close();
+                        }
+                    } else {
+                        echo "complete";
                     }
                     ?>
+
                 </div>
             </div>
         </div>

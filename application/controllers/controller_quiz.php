@@ -35,9 +35,11 @@ class Controller_Quiz extends CI_Controller {
         $data['post_question_id'] = $question_id;
 
         $question = $this->questions_model->get_question($question_id);
-        $data['question'] = $question[0]['question'];
-        $data['question_score'] = $question[0]['score'];
-        $data['question_genre'] = $question[0]['genre'];
+        if ($question[0]['question']) {
+            $data['question'] = $question[0]['question'];
+            $data['question_score'] = $question[0]['score'];
+            $data['question_genre'] = $question[0]['genre'];
+        }
 
         if ($this->input->post()) {
             if ($_POST['direction'] === 'back') {
@@ -48,6 +50,11 @@ class Controller_Quiz extends CI_Controller {
                 $data['answer'] = $_POST['post_next_answer'];
                 $answer = $data['answer'];
                 $this->questions_model->answer($user_id, $former_question_id, $answer);
+            } else if ($_POST['direction'] === 'end') {
+                $data['answer'] = $_POST['post_next_answer'];
+                $answer = $data['answer'];
+                $this->questions_model->answer($user_id, $_POST['former_question_id'], $answer);
+
             }
 
         } else {
