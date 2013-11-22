@@ -37,6 +37,6 @@ $confirm_new_password = array(
             <div style="color: red;"><?php echo form_error($confirm_new_password['name']); ?><?php echo isset($errors[$confirm_new_password['name']])?$errors[$confirm_new_password['name']]:''; ?></div>
         </div>
     </div>
+    <?php echo form_submit('change', '更改'); ?>
+    <?php echo form_close(); ?>
 </div>
-<?php echo form_submit('change', '更改'); ?>
-<?php echo form_close(); ?>

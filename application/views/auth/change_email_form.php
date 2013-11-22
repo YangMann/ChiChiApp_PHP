@@ -26,6 +26,6 @@ $email = array(
             <div style="color: red;"><?php echo form_error($email['name']); ?><?php echo isset($errors[$email['name']])?$errors[$email['name']]:''; ?></div>
         </div>
     </div>
+    <?php echo form_submit('change', '发送确认邮件'); ?>
+    <?php echo form_close(); ?>
 </div>
-<?php echo form_submit('change', '发送确认邮件'); ?>
-<?php echo form_close(); ?>

@@ -35,36 +35,37 @@ $captcha = array(
 	'maxlength'	=> 8,
 );
 ?>
-<div class="fm-wrapper">
+<div class="fm-wrapper fm-register g-r">
     <?php echo form_open($this->uri->uri_string()); ?>
-    <div>
+    <div class="u-1">
+        <legend>注册</legend>
         <?php if ($use_username) { ?>
-        <div>
-            <div><?php echo form_label('用户名', $username['id']); ?></div>
-            <div><?php echo form_input($username); ?></div>
+        <div class="fm-group g-r">
+            <div class="u-1-4"><?php echo form_label('用户名', $username['id']); ?></div>
+            <div class="u-3-4"><?php echo form_input($username); ?></div>
             <div style="color: red;"><?php echo form_error($username['name']); ?><?php echo isset($errors[$username['name']])?$errors[$username['name']]:''; ?></div>
         </div>
         <?php } ?>
-        <div>
-            <div><?php echo form_label('邮箱', $email['id']); ?></div>
-            <div><?php echo form_input($email); ?></div>
+        <div class="fm-group g-r">
+            <div class="u-1-4"><?php echo form_label('邮箱', $email['id']); ?></div>
+            <div class="u-3-4"><?php echo form_input($email); ?></div>
             <div style="color: red;"><?php echo form_error($email['name']); ?><?php echo isset($errors[$email['name']])?$errors[$email['name']]:''; ?></div>
         </div>
-        <div>
-            <div><?php echo form_label('密码', $password['id']); ?></div>
-            <div><?php echo form_password($password); ?></div>
+        <div class="fm-group g-r">
+            <div class="u-1-4"><?php echo form_label('密码', $password['id']); ?></div>
+            <div class="u-3-4"><?php echo form_password($password); ?></div>
             <div style="color: red;"><?php echo form_error($password['name']); ?></div>
         </div>
-        <div>
-            <div><?php echo form_label('确认密码', $confirm_password['id']); ?></div>
-            <div><?php echo form_password($confirm_password); ?></div>
+        <div class="fm-group g-r">
+            <div class="u-1-4"><?php echo form_label('确认密码', $confirm_password['id']); ?></div>
+            <div class="u-3-4"><?php echo form_password($confirm_password); ?></div>
             <div style="color: red;"><?php echo form_error($confirm_password['name']); ?></div>
         </div>
 
         <?php if ($captcha_registration) {
             if ($use_recaptcha) { ?>
         <div>
-            <div colspan="2">
+            <div>
                 <div id="recaptcha_image"></div>
             </div>
             <div>
@@ -83,20 +84,22 @@ $captcha = array(
             <?php echo $recaptcha_html; ?>
         </div>
         <?php } else { ?>
-        <div>
-            <div colspan="3">
-                <p>Enter the code exactly as it appears:</p>
+        <div class="fm-group g-r">
+            <div class="u-1-4">
+                <label>输入图中文字</label>
+            </div>
+            <div class="u-3-4">
                 <?php echo $captcha_html; ?>
             </div>
         </div>
         <div>
-            <div><?php echo form_label('Confirmation Code', $captcha['id']); ?></div>
+            <div><?php echo form_label('验证码', $captcha['id']); ?></div>
             <div><?php echo form_input($captcha); ?></div>
             <div style="color: red;"><?php echo form_error($captcha['name']); ?></div>
         </div>
         <?php }
         } ?>
     </div>
+    <?php echo form_submit('register', '注册'); ?>
+    <?php echo form_close(); ?>
 </div>
-<?php echo form_submit('register', '注册'); ?>
-<?php echo form_close(); ?>

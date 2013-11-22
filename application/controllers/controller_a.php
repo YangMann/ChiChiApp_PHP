@@ -17,7 +17,12 @@ class Controller_A extends CI_Controller {
     }
 
     function home() {
-        echo "HOME!!!!";
+        $data['title'] = "";
+        $data['stylesheet'] = "";
+        $data['script'] = "";
+        $data['is_logged_in'] = $this->tank_auth->is_logged_in();
+        $data['username'] = $this->tank_auth->get_username();
+        $this->load->view('pages/home_content', $data);
     }
 
     function blog($blogId = null) {

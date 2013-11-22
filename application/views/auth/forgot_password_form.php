@@ -21,6 +21,6 @@ if ($this->config->item('use_username', 'tank_auth')) {
             <div style="color: red;"><?php echo form_error($login['name']); ?><?php echo isset($errors[$login['name']])?$errors[$login['name']]:''; ?></div>
         </div>
     </div>
+    <?php echo form_submit('reset', '重置密码'); ?>
+    <?php echo form_close(); ?>
 </div>
-<?php echo form_submit('reset', '重置密码'); ?>
-<?php echo form_close(); ?>
