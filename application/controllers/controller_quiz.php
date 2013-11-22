@@ -48,7 +48,11 @@ class Controller_Quiz extends CI_Controller {
         } else {
             $data['answer'] = '';
         }
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/nav', $data);
         $this->load->view('templates/online_quiz', $data);
+        $this->load->view('templates/footer', $data);
+
 
 //        if ($this->questions_model->is_question_empty($former_question_id)) {
 //            echo 'it is the first question';

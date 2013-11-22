@@ -8,20 +8,16 @@ bel><input type='text' id='answer' value=" . $old_answer . "></label>";
 
 if ($this->questions_model->get_question($former_question_id)) {
     echo form_open('quiz/questions/' . $former_question_id);
-    echo "<la
-bel><input type='hidden' name='direction' value='back'></label>";
-    echo "<la
-bel><input type='hidden' name='post_former_answer' id='post_former_answer'></label>";
+    echo "<label><input type='hidden' name='direction' value='back'></label>";
+    echo "<label><input type='hidden' name='post_former_answer' id='post_former_answer'></label>";
     echo "<button type='submit' id='post_former_answer_button'>Back</button>";
     echo form_close();
 }
 
 if ($this->questions_model->get_question($next_question_id)) {
     echo form_open('quiz/questions/' . $next_question_id);
-    echo "<la
-bel><input type='hidden' name='direction' value='next'></label>";
-    echo "<la
-bel><input type='hidden' name='post_next_answer' id='post_next_answer'></label>";
+    echo "<label><input type='hidden' name='direction' value='next'></label>";
+    echo "<label><input type='hidden' name='post_next_answer' id='post_next_answer'></label>";
     echo "<button type='submit' id='post_next_answer_button'>Next</button>";
     echo form_close();
 }
