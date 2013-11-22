@@ -6,7 +6,7 @@
  * Time: 2:17 PM
  */
 
-class Quiz_Controller extends CI_Controller
+class Controller_Quiz extends CI_Controller
 {
     public function questions($question_id)
     {
@@ -30,7 +30,7 @@ class Quiz_Controller extends CI_Controller
         } else {
             $data['answer'] = '';
         }
-        $this->load->view('online_quiz', $data);
+        $this->load->view('templates/online_quiz', $data);
 
 //        if ($this->questions_model->is_question_empty($former_question_id)) {
 //            echo 'it is the first question';
