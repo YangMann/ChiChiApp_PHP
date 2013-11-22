@@ -2240,12 +2240,14 @@ ul.bl-genre-list li{
     font-family: "Lato", "Microsoft Yahei", sans-serif !important;
 }
 
-.fm-login form {
+.fm-login form,
+.fm-register form {
     width: 100%;
     max-width: 450px;
 }
 
-.fm-login label {
+.fm-login label,
+.fm-register label {
     padding-top: 7px;
     padding-right: 15px;
     text-align: right;
@@ -2257,7 +2259,8 @@ ul.bl-genre-list li{
     display: inline-block;
 }
 
-.fm-wrapper.fm-login {
+.fm-wrapper.fm-login,
+.fm-wrapper.fm-register {
     padding: 50px 85px 50px 0;
 }
 

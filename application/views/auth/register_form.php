@@ -100,6 +100,11 @@ $captcha = array(
         <?php }
         } ?>
     </div>
-    <?php echo form_submit('register', '注册'); ?>
+    <div class="g-r">
+        <div class="u-1-4"></div>
+        <div class="u-1-2">
+            <button type="submit" name="register" class="bt bt-block bt-primary">注册</button>
+        </div>
+    </div>
     <?php echo form_close(); ?>
 </div>

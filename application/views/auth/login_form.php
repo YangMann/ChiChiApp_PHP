@@ -34,7 +34,7 @@ $captcha = array(
 <div class="fm-wrapper fm-login g-r">
     <?php echo form_open($this->uri->uri_string()); ?>
     <div class="u-1">
-        <legend>登陆交大吃吃</legend>
+        <legend>登陆</legend>
     </div>
     <div class="fm-group g-r">
 
