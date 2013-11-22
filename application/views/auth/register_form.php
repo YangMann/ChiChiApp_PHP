@@ -39,23 +39,23 @@ $captcha = array(
 <table>
 	<?php if ($use_username) { ?>
 	<tr>
-		<td><?php echo form_label('Username', $username['id']); ?></td>
+		<td><?php echo form_label('用户名', $username['id']); ?></td>
 		<td><?php echo form_input($username); ?></td>
 		<td style="color: red;"><?php echo form_error($username['name']); ?><?php echo isset($errors[$username['name']])?$errors[$username['name']]:''; ?></td>
 	</tr>
 	<?php } ?>
 	<tr>
-		<td><?php echo form_label('Email Address', $email['id']); ?></td>
+		<td><?php echo form_label('邮箱', $email['id']); ?></td>
 		<td><?php echo form_input($email); ?></td>
 		<td style="color: red;"><?php echo form_error($email['name']); ?><?php echo isset($errors[$email['name']])?$errors[$email['name']]:''; ?></td>
 	</tr>
 	<tr>
-		<td><?php echo form_label('Password', $password['id']); ?></td>
+		<td><?php echo form_label('密码', $password['id']); ?></td>
 		<td><?php echo form_password($password); ?></td>
 		<td style="color: red;"><?php echo form_error($password['name']); ?></td>
 	</tr>
 	<tr>
-		<td><?php echo form_label('Confirm Password', $confirm_password['id']); ?></td>
+		<td><?php echo form_label('确认密码', $confirm_password['id']); ?></td>
 		<td><?php echo form_password($confirm_password); ?></td>
 		<td style="color: red;"><?php echo form_error($confirm_password['name']); ?></td>
 	</tr>
@@ -63,10 +63,10 @@ $captcha = array(
 	<?php if ($captcha_registration) {
 		if ($use_recaptcha) { ?>
 	<tr>
-		<td colspan="2">
-			<div id="recaptcha_image"></div>
-		</td>
-		<td>
+        <td colspan="2">
+            <div id="recaptcha_image"></div>
+        </td>
+        <td>
 			<a href="javascript:Recaptcha.reload()">Get another CAPTCHA</a>
 			<div class="recaptcha_only_if_image"><a href="javascript:Recaptcha.switch_type('audio')">Get an audio CAPTCHA</a></div>
 			<div class="recaptcha_only_if_audio"><a href="javascript:Recaptcha.switch_type('image')">Get an image CAPTCHA</a></div>
@@ -96,5 +96,5 @@ $captcha = array(
 	<?php }
 	} ?>
 </table>
-<?php echo form_submit('register', 'Register'); ?>
+<?php echo form_submit('register', '注册'); ?>
 <?php echo form_close(); ?>
