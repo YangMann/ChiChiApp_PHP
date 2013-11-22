@@ -17,12 +17,6 @@
                         <li>
                             <a class="nv-icon nv-icon-earth"><?= $username ?></a>
                         </li><?php
-                    } else {
-                        ?>
-                        <li>
-                            <a class="nv-icon nv-icon-earth" data-redir="auth/login" data-redir-target="wd-main" href="/auth/login">登陆</a>
-                        </li>
-                    <?php
                     }
                     ?>
                     <li>

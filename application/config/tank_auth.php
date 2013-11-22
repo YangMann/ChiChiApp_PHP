@@ -124,6 +124,7 @@ $config['captcha_case_sensitive'] = TRUE;
 |
 | 'use_recaptcha' = Use reCAPTCHA instead of common captcha
 | You can get reCAPTCHA keys by registering at http://recaptcha.net
+| https://www.google.com/recaptcha/admin/site?siteid=317368642
 |--------------------------------------------------------------------------
 */
 $config['use_recaptcha'] = TRUE;

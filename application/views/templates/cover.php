@@ -7,10 +7,25 @@
 
             <p class="as-cover-description">两岸猿声啼不住，轻舟已过万重山</p>
 
-            <div class="as-cover-actions">
-                <a class="bt bt-default" href="#">jAccount登陆</a>
-                <a class="bt bt-primary">人人登陆</a>
-            </div>
+            <?php
+            if (!$is_logged_in) {
+                ?>
+
+                <div class="as-cover-actions">
+                    <a class="bt bt-default" data-redir="auth/login" data-redir-target="wd-main"
+                       href="/auth/login">帐号登陆</a>
+                    <a class="bt bt-primary" href="/auth/connect/session/renren">人人登陆</a>
+                </div>
+            <?php
+            } else {
+                ?>
+                <div class="as-cover-actions">
+                    <a class="bt bt-success bt-block" data-redir="auth/login" data-redir-target="wd-main"
+                       href="/auth/login">吃吃的大冒险</a>
+                </div>
+            <?php
+            }
+            ?>
 
             <footer class="as-cover-annotations">
                 <a class="as-cover-name" href="#">韩式石锅拌饭</a>

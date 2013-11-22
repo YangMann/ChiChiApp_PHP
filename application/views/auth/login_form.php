@@ -7,11 +7,11 @@ $login = array(
 	'size'	=> 30,
 );
 if ($login_by_username AND $login_by_email) {
-	$login_label = 'Email or login';
+	$login_label = '邮箱或用户名';
 } else if ($login_by_username) {
-	$login_label = 'Login';
+	$login_label = '用户名';
 } else {
-	$login_label = 'Email';
+	$login_label = '邮箱';
 }
 $password = array(
 	'name'	=> 'password',
@@ -39,7 +39,7 @@ $captcha = array(
 		<td style="color: red;"><?php echo form_error($login['name']); ?><?php echo isset($errors[$login['name']])?$errors[$login['name']]:''; ?></td>
 	</tr>
 	<tr>
-		<td><?php echo form_label('Password', $password['id']); ?></td>
+		<td><?php echo form_label('密码', $password['id']); ?></td>
 		<td><?php echo form_password($password); ?></td>
 		<td style="color: red;"><?php echo form_error($password['name']); ?><?php echo isset($errors[$password['name']])?$errors[$password['name']]:''; ?></td>
 	</tr>
@@ -73,7 +73,7 @@ $captcha = array(
 		</td>
 	</tr>
 	<tr>
-		<td><?php echo form_label('Confirmation Code', $captcha['id']); ?></td>
+		<td><?php echo form_label('验证码', $captcha['id']); ?></td>
 		<td><?php echo form_input($captcha); ?></td>
 		<td style="color: red;"><?php echo form_error($captcha['name']); ?></td>
 	</tr>
@@ -83,11 +83,15 @@ $captcha = array(
 	<tr>
 		<td colspan="3">
 			<?php echo form_checkbox($remember); ?>
-			<?php echo form_label('Remember me', $remember['id']); ?>
-			<?php echo anchor('/auth/forgot_password/', 'Forgot password'); ?>
-			<?php if ($this->config->item('allow_registration', 'tank_auth')) echo anchor('/auth/register/', 'Register'); ?>
+			<?php echo form_label('记住登陆', $remember['id']); ?>
+            <a href="/auth/forgot_password/" data-redir="auth/forgot_password" data-redir-target="wd-main">忘记密码</a>
+			<?php if ($this->config->item('allow_registration', 'tank_auth')) {
+                ?>
+                <a href="/auth/register" data-redir="auth/register" data-redir-target="wd-main">注册</a>
+                <?php
+            } ?>
 		</td>
 	</tr>
 </table>
-<?php echo form_submit('submit', 'Let me in'); ?>
+<?php echo form_submit('submit', '登陆'); ?>
 <?php echo form_close(); ?>
