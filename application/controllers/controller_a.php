@@ -37,7 +37,7 @@ class Controller_A extends CI_Controller {
                     $data['blog_next']=$this->blog_model->get_blogs($blogId+1);
                 }
                 if ($blogId !== null) {
-                    $this -> load -> view('templates/blog_single', $data);
+                    $this -> load -> view('templates/blog_single_content', $data);
                 } else {
                     $this->load->view('pages/blog_content', $data);
                 }

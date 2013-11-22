@@ -57,14 +57,3 @@ $html = Markdown::defaultTransform($text);
         </a>
     </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
-

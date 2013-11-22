@@ -25,6 +25,8 @@ class Controller_Blog extends CI_Controller {
         $data['title'] = "博客";
         $data['stylesheet'] = "";
         $data['script'] = "";
+        $data['is_logged_in'] = $this->tank_auth->is_logged_in();
+        $data['username'] = $this->tank_auth->get_username();
         $data['blog'] = $this->blog_model->get_blogs($blogId);
         if($blogId!==null) {
             $data['blog_next']=$this->blog_model->get_blogs($blogId+1);

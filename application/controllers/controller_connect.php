@@ -6,11 +6,14 @@
  * Time: 下午10:49
  */
 
-class Connect_Controller extends CI_Controller {
+class Controller_Connect extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->session->userdata('is_login') AND redirect();
+        $this->load->library('tank_auth');
+        $this->load->helper('url');
+//        $this->session->userdata('is_login') AND redirect();
+        $this->tank_auth->is_logged_in() AND redirect();
     }
 
     public function session($provider = '') {
@@ -23,6 +26,7 @@ class Connect_Controller extends CI_Controller {
         }
         $this->load->library('oauth2');
         $provider = $this->oauth2->provider($provider, $allowed_providers[$provider]);
+        echo "7\n";
         $args = $this->input->get();
         if ($args AND !isset($args['code'])) {
             $this->session->set_flashdata('info', '授权失败了,可能由于应用设置问题或者用户拒绝授权.<br />具体原因:<br />' . json_encode($args));

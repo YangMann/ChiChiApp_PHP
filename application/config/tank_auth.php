@@ -110,13 +110,13 @@ $config['forgot_password_expire'] = 60*15;
 |--------------------------------------------------------------------------
 */
 $config['captcha_path'] = 'captcha/';
-$config['captcha_fonts_path'] = 'captcha/fonts/5.ttf';
-$config['captcha_width'] = 200;
-$config['captcha_height'] = 50;
+$config['captcha_fonts_path'] = 'captcha/fonts/4.ttf';
+$config['captcha_width'] = 240;
+$config['captcha_height'] = 34;
 $config['captcha_font_size'] = 14;
-$config['captcha_grid'] = FALSE;
+$config['captcha_grid'] = TRUE;
 $config['captcha_expire'] = 180;
-$config['captcha_case_sensitive'] = TRUE;
+$config['captcha_case_sensitive'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
@@ -124,9 +124,10 @@ $config['captcha_case_sensitive'] = TRUE;
 |
 | 'use_recaptcha' = Use reCAPTCHA instead of common captcha
 | You can get reCAPTCHA keys by registering at http://recaptcha.net
+| https://www.google.com/recaptcha/admin/site?siteid=317368642
 |--------------------------------------------------------------------------
 */
-$config['use_recaptcha'] = TRUE;
+$config['use_recaptcha'] = FALSE;
 $config['recaptcha_public_key'] = '6LdCqeoSAAAAANk3sVT0NllwYyJXwNokeFceggnJ';
 $config['recaptcha_private_key'] = '6LdCqeoSAAAAAHfKEzeJ9ZLuamxoCR_qjcesyFdg';
 

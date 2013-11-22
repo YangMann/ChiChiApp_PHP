@@ -37,10 +37,13 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+$route['auth']                  = 'controller_auth';
+$route['auth/connect/(:any)']   = 'controller_connect/$1/$2';
 $route['auth/(:any)']           = 'controller_auth/$1';
 $route['quiz/questions/(:any)'] = 'controller_quiz/questions/$1';
 $route['gcm/(:any)']            = 'controller_gcm/send_gcm_notify/$1';
 $route['blog/(:any)']           = 'controller_blog/view/$1';
+$route['a/auth/(:any)']         = 'controller_auth/$1';
 $route['a/blog/(:any)']         = 'controller_a/blog/$1';
 $route['a/(\w+)']               = 'controller_a/$1';
 $route['(:any)']                = 'controller_pages/view/$1';
