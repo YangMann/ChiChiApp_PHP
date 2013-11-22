@@ -90,13 +90,13 @@ $captcha = array(
             </div>
         </div>
         <div>
-            <div><?php echo form_label('Confirmation Code', $captcha['id']); ?></div>
+            <div><?php echo form_label('验证码', $captcha['id']); ?></div>
             <div><?php echo form_input($captcha); ?></div>
             <div style="color: red;"><?php echo form_error($captcha['name']); ?></div>
         </div>
         <?php }
         } ?>
     </div>
+    <?php echo form_submit('register', '注册'); ?>
+    <?php echo form_close(); ?>
 </div>
-<?php echo form_submit('register', '注册'); ?>
-<?php echo form_close(); ?>

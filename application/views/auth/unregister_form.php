@@ -14,6 +14,6 @@ $password = array(
             <div style="color: red;"><?php echo form_error($password['name']); ?><?php echo isset($errors[$password['name']])?$errors[$password['name']]:''; ?></div>
         </div>
     </div>
+    <?php echo form_submit('cancel', '删除账户'); ?>
+    <?php echo form_close(); ?>
 </div>
-<?php echo form_submit('cancel', '删除账户'); ?>
-<?php echo form_close(); ?>
