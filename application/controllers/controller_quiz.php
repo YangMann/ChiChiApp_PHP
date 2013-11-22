@@ -65,26 +65,10 @@ class Controller_Quiz extends CI_Controller
             $data['answer'] = '';
         }
         $this->load->view('templates/online_quiz', $data);
-
-
-//        if ($this->questions_model->is_question_empty($former_question_id)) {
-//            echo 'it is the first question';
-//            $this->load->view('online_quiz', $data);
-//        }
-//        else if ($this->questions_model->is_question_empty($next_question_id)) {
-//            echo 'it is the last question';
-//
-//            $this->load->view('online_quiz', $data);
-//        }
-//        else {
-//            $this->load->view('online_quiz', $data);
-//        }
-
     }
 
     public function questions_($question_id)
     {
-
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
         $this->load->model('questions_model');
@@ -122,6 +106,10 @@ class Controller_Quiz extends CI_Controller
                 $data['answer'] = $_POST['post_next_answer'];
                 $answer = $data['answer'];
                 $this->questions_model->answer($user_id, $former_question_id, $answer);
+            } else if ($_POST['direction'] === 'end') {
+                $data['answer'] = $_POST['post_next_answer'];
+                $answer = $data['answer'];
+                $this->questions_model->answer($user_id, $_POST['former_question_id'], $answer);
             }
 
         } else {
@@ -136,6 +124,8 @@ class Controller_Quiz extends CI_Controller
 
     public function mark($user_id, $question_id)
     {
-
+        $this->load->model('questions_model');
+        $this->questions_model->mark($user_id, $question_id);
+        $this->load->view('templates/empty');
     }
 }
