@@ -1,6 +1,13 @@
 /**
  * Created by JeffreyZhang on 13-10-23.
  */
+$(document).ready(function(){
+    $(window).resize(function(){
+        $(".u-2-3").css("width", $(window).width()-$(".u-1-3").width());
+    });
+    $(window).resize();
+});
+
 function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie != '') {
@@ -54,4 +61,3 @@ $(window).ready(function () {
         });
         redirCapture();
     });
-

@@ -1920,8 +1920,9 @@ input.nv-search:focus {
 }
 
 .wd-inner {
-    max-width: 810px;
-    padding: 50px 85px 50px 0;
+    max-width: 1024px;
+    padding: 50px 10% 50px 10%;
+    margin: auto;
 }
 
 .wd-wrapper.wd-fullscreen {
@@ -1930,12 +1931,6 @@ input.nv-search:focus {
 
 .as-cover.wd-fullscreen {
     display: none;
-}
-
-@media (max-width: 1100px) {
-    .wd-inner {
-        padding-left: 10%;
-    }
 }
 
 @media (max-width: 767px) {
@@ -2118,7 +2113,19 @@ h1.bl-title{
 
 /*considerable*/
 .fw-wrapper ,.wd-main{
+    height: 100%;
+}
+
+.home_content {
+    overflow: hidden;
+    height: 100%;
+}
+
+.home_img {
     height: auto;
+    weight: auto;
+    max-height: inherit !important;
+    max-width: inherit !important;
 }
 
 .bl-background-size-cover .bl-header-image-cover {
