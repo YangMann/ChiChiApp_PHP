@@ -2,12 +2,17 @@
  * Created by JeffreyZhang on 13-10-23.
  */
 $(document).ready(function(){
-    $(window).resize(function(){
-        if($(window).width()>=767)
+    function u23resize(){
+        //if($(window).width()>=767){
+        if($(".u-1-3").css("visibility")=="visible" && $(".u-1-3").css("display")!="none") {
             $(".u-2-3").css("width", $(window).width()-$(".u-1-3").width());
-        else
+            $(".nv-open-all").css("width", $(".u-1-3").width());
+        }
+        else{
             $(".u-2-3").css("width", $(window).width());
-    });
+        }
+    }
+    $(window).resize("u23resize()");
     $(window).resize();
 });
 
