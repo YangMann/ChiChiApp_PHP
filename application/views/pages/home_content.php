@@ -3,7 +3,7 @@
         <img class="home_img" src="<?php echo base_url('assets/img/home/大冒险.jpg'); ?>"/>
     </a>
 </div>
-
+<!--
 <script>
     $(document).ready(function() {
         function imgresize(){
@@ -26,3 +26,4 @@
         $(".home_content").resize(imgresize);
     });
 </script>
+-->

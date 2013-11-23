@@ -2122,7 +2122,8 @@ h1.bl-title{
 
 .home_img {
     height: auto;
-    weight: auto;
+    width: 90%;
+    margin-top: 90px;
     max-height: inherit !important;
     max-width: inherit !important;
 }
