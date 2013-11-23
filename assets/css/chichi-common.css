@@ -2262,7 +2262,7 @@ ul.bl-genre-list li{
 
 .fm-wrapper.fm-login,
 .fm-wrapper.fm-register {
-    padding: 50px 85px 50px 0;
+    padding: 50px 85px 0 85px;
 }
 
 /**

@@ -168,7 +168,7 @@ class Controller_Auth extends CI_Controller {
                         }
                         unset($data['password']); // Clear password (just for any case)
 
-                        $this->_show_message($this->lang->line('auth_message_registration_completed_2') . ' ' . anchor('/', 'Login'));
+                        $this->_show_message('<!DOCTYPE html><html><head><meta charset="utf-8"></head><body>'.$this->lang->line('auth_message_registration_completed_2') . ' ' . anchor('/', 'Login').'</body></html>');
                     }
                 } else {
                     $errors = $this->tank_auth->get_error_message();

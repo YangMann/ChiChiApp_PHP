@@ -26,10 +26,16 @@
                     <li>
                         <a class="nv-icon nv-icon-archive" data-redir="blog" data-redir-target="wd-main" href="/blog">吃货日志</a>
                     </li>
+                    <?php
+                    if ($is_logged_in) {
+                    ?>
                     <li>
                         <a class="nv-icon nv-icon-earth" data-redir="adventure/questions/1" data-redir-target="wd-main"
                            href="/adventure/questions/1">吃吃的大冒险</a>
                     </li>
+                    <?php
+                    }
+                    ?>
                     <!--<li>
                         <a class="nv-icon nv-icon-download">包含二级菜单</a>
                         <ul class="nv-sub-menu">
