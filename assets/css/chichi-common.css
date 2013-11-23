@@ -2112,7 +2112,7 @@ h1.bl-title{
 
 /*considerable*/
 .fw-wrapper ,.wd-main{
-    height: 100%;
+    height: auto;
 }
 
 .home_content {

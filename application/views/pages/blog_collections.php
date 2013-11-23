@@ -3,9 +3,8 @@
 $count = count($blog['id']);
 //echo $count;
 $cArray=array();
-$length=0;
 for ($i = 0; $i < $count; $i++) {
-    if(!array_key_exists($blog['genre'][$i], $cArray)){
+    if(in_array($blog['genre'][$i], $cArray)==false){
         array_push($cArray,$blog['genre'][$i]);
     }
 }
