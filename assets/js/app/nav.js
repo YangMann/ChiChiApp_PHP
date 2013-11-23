@@ -383,93 +383,100 @@
     return NProgress;
 });
 
-(function ($) {
+$(document).ready(function () {
+    var state={};
+    (function ($) {
 
-    "use strict";
+        "use strict";
 
-    $.redir = function (elements, index, options) {
-        $(".bl-background-size-cover").click(function(){
-            $(document).scrollTop(0);
-        });
-        var defaults = {},
-            plugin = this,
-            target = $(document).find("#wd-main"),
-            settings = {},
-            $elements = $(elements);
+        $.redir = function (elements, index, options) {
+            $(".bl-item-title a, a.bl-background-size-cover").click(function(){
+                $(document).scrollTop(0);
+            });
 
-        plugin.init = function () {
-            plugin.settings = $.extend({}, defaults, options);
-            mainHandler(index);
-        };
+            var defaults = {},
+                plugin = this,
+                target = $(document).find("#wd-main"),
+                settings = {},
+                $elements = $(elements);
 
-        var mainHandler = function (index) {
-            if ($elements.length <= 0) {
-                return;
-            }
-            $elements.on("click", function (e) {
-                var href = "/" + $(this).attr("data-redir") + "/";
-                NProgress.start();
-                e.preventDefault();
-                var state = {coverDisplayBefore: $(".as-cover").data("cover-display")};
-                /*if (history && history.pushState) {
-                    console.log("pushed state", {coverDisplay: $(".as-cover").data("cover-display")});
-                    history.pushState({coverDisplay: $(".as-cover").data("cover-display")}, document.title, "/" + $(this).attr("data-redir") + "/");
+            plugin.init = function () {
+                plugin.settings = $.extend({}, defaults, options);
+                mainHandler(index);
+            };
+
+            var mainHandler = function (index) {
+                if ($elements.length <= 0) {
+                    return;
                 }
-                else {
-                    window.location.hash = "!" + $(this).attr("data-redir");
-                }*/
-                if ($(document).find(".wd-main").length === 0) {
-                    console.log("!wd-main");
+                $elements.on("click", function (e) {
+                    var href = "/" + $(this).attr("data-redir") + "/";
+                    NProgress.start();
+                    e.preventDefault();
+                    state["coverDisplayBefore"]= $(".as-cover").attr("data-cover-display");
+                    /*if (history && history.pushState) {
+                     console.log("pushed state", {coverDisplay: $(".as-cover").data("cover-display")});
+                     history.pushState({coverDisplay: $(".as-cover").data("cover-display")}, document.title, "/" + $(this).attr("data-redir") + "/");
+                     }
+                     else {
+                     window.location.hash = "!" + $(this).attr("data-redir");
+                     }*/
+                    if ($(document).find(".wd-main").length === 0) {
+                        console.log("!wd-main");
 //                    $.post("/" + $(this).attr("data-redir") + "/", {}, function (response) {
 //                        $(document).html(response);
 //                    })
-                    location.href = $(this).attr("href");
-                } else {
-                    console.log("else");
-                    $.ajax({
-                        type: "POST",
-                        url: "/a/" + $(this).attr("data-redir") + "/",
-                        dataType: "html",
-                        data: {},
-                        success: function (response) {
-                            if (plugin.settings["target"] === "wd-fullscreen") {
-                                $(".as-cover").addClass("wd-fullscreen").attr("data-cover-display", "hidden");
-                                $(".wd-wrapper").addClass("wd-fullscreen");
-                            } else if (plugin.settings["target"] === "wd-main") {
-                                $(".as-cover").removeClass("wd-fullscreen").attr("data-cover-display", "show");
-                                $(".wd-wrapper").removeClass("wd-fullscreen");
+                        location.href = $(this).attr("href");
+                    } else {
+                        console.log("else");
+                        $.ajax({
+                            type: "POST",
+                            url: "/a/" + $(this).attr("data-redir") + "/",
+                            dataType: "html",
+                            data: {},
+                            success: function (response) {
+                                if (plugin.settings["target"] === "wd-fullscreen") {
+                                    $(".as-cover").addClass("wd-fullscreen").attr("data-cover-display", "hidden");
+                                    $(".wd-wrapper").addClass("wd-fullscreen");
+                                } else if (plugin.settings["target"] === "wd-main") {
+                                    $(".as-cover").removeClass("wd-fullscreen").attr("data-cover-display", "show");
+                                    $(".wd-wrapper").removeClass("wd-fullscreen");
+                                }
+                                if (history && history.pushState) {
+                                    state.coverDisplayBefore = $(".as-cover").attr("data-cover-display");
+                                    state.coverDisplayAfter = $(".as-cover").attr("data-cover-display");
+                                    $("body").attr("test", state.coverDisplayBefore)
+                                    console.log("pushed state", {coverDisplay: $(".as-cover").attr("data-cover-display")});
+                                    console.log("pushed state", state);
+
+                                    history.pushState(state, document.title, href);
+                                    //history.pushState(state,document.title, href);
+                                }
+                                else {
+                                    window.location.hash = "!" + $(this).attr("data-redir");
+                                }
+                                $(target).html(response);
+                                NProgress.done();
                             }
-                            if (history && history.pushState) {
-                                state.coverDisplayAfter = $(".as-cover").data("cover-display");
-//                                console.log("pushed state", {coverDisplay: $(".as-cover").data("cover-display")});
-                                history.pushState(state, document.title, href);
-                            }
-                            else {
-                                window.location.hash = "!" + $(this).attr("data-redir");
-                            }
-                            $(target).html(response);
-                            NProgress.done();
-                        }
-                    });
+                        });
+                    }
+                });
+            };
+
+            plugin.init();
+        };
+
+        $.fn.redir = function (index, options) {
+            return this.each(function () {
+                if (undefined != $(this).data('redir')) {
+                    var plugin = new $.redir(this, index, options);
+                    $(this).data('redir', plugin);
                 }
             });
         };
 
-        plugin.init();
-    };
+    })(jQuery);
 
-    $.fn.redir = function (index, options) {
-        return this.each(function () {
-            if (undefined != $(this).data('redir')) {
-                var plugin = new $.redir(this, index, options);
-                $(this).data('redir', plugin);
-            }
-        });
-    };
-
-})(jQuery);
-
-$(document).ready(function () {
 
     "use strict";
     var target = $(document).find("#wd-main");
@@ -486,10 +493,11 @@ $(document).ready(function () {
                     window.location.reload();
                 } else {
                     $.post("/a/" + targetUrl, {}, function (response) {
-                        if (e.originalEvent.state == null || e.originalEvent.state["coverDisplayBefore"] === "show") {
+                        $("body").attr("test2", state["coverDisplayBefore"]);
+                        if (e.originalEvent.state==null || e.originalEvent.state.coverDisplayBefore === "show") {
                             $(".as-cover").removeClass("wd-fullscreen").attr("data-cover-display", "show");
                             $(".wd-wrapper").removeClass("wd-fullscreen");
-                        } else if (e.originalEvent.state["coverDisplayBefore"] === "hidden") {
+                        } else if (e.originalEvent.state.coverDisplayBefore === "hidden" ) {
                             $(".as-cover").addClass("wd-fullscreen").attr("data-cover-display", "hidden");
                             $(".wd-wrapper").addClass("wd-fullscreen");
                         }

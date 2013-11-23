@@ -1921,7 +1921,7 @@ input.nv-search:focus {
 
 .wd-inner {
     max-width: 1024px;
-    padding: 50px 10% 50px 10%;
+    padding: 50px 10% 50px 0;
     margin: auto;
 }
 
