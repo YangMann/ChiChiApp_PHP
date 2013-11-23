@@ -445,7 +445,7 @@ $(document).ready(function () {
                                 if (history && history.pushState) {
                                     state.coverDisplayBefore = $(".as-cover").attr("data-cover-display");
                                     state.coverDisplayAfter = $(".as-cover").attr("data-cover-display");
-                                    $("body").attr("test", state.coverDisplayBefore)
+
                                     console.log("pushed state", {coverDisplay: $(".as-cover").attr("data-cover-display")});
                                     console.log("pushed state", state);
 
@@ -493,7 +493,6 @@ $(document).ready(function () {
                     window.location.reload();
                 } else {
                     $.post("/a/" + targetUrl, {}, function (response) {
-                        $("body").attr("test2", state["coverDisplayBefore"]);
                         if (e.originalEvent.state==null || e.originalEvent.state.coverDisplayBefore === "show") {
                             $(".as-cover").removeClass("wd-fullscreen").attr("data-cover-display", "show");
                             $(".wd-wrapper").removeClass("wd-fullscreen");
