@@ -2017,6 +2017,13 @@ input.nv-search:focus {
     color: #332624;
 }
 
+.bl-item-time {
+    font-weight: 300;
+    font-style: normal;
+    padding-bottom: 6px;
+    font-size: 18px;
+    color: #332624;
+}
 .bl-item-summary {
     font-weight: 400;
     font-style: normal;

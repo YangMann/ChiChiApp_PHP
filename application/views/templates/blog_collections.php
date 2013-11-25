@@ -1,7 +1,7 @@
 <?php
 //echo 'pages/blog<br>';
 $count = count($blog['id']);
-//echo $count;
+echo $count;
 $cArray=array();
 for ($i = 0; $i < $count; $i++) {
     if(in_array($blog['genre'][$i], $cArray)==false){
@@ -49,12 +49,13 @@ for ($i = 0; $i < $count; $i++) {
                 </h1>
 
         <?php
-            for ($i = 0; $i < $count; $i++) {
+            for ($i = $count-1;$i >=0; $i--) {
                 if($genre == $blog['genre'][$i]) {
                 ?>
                     <article class="bl-item">
+
                         <h3 class="bl-item-title">
-                            <a href="<?= '/blog/' . $blog['id'][$i] ?>" title="<?= $blog['title'][$i] ?>"
+                            <a href="<?= '/blog/' . $blog['id'][$i] ?>"  target="_blank"  title="<?= $blog['title'][$i] ?>"
                                data-redir="<?= 'blog/' . $blog['id'][$i] ?>" data-redir-target="wd-fullscreen"><?= $blog['title'][$i] ?></a>
                         </h3>
                         <a class="bl-item-summary" href="<?= '/blog/' . $blog['id'][$i] ?>" title="<?= $blog['title'][$i] ?> "

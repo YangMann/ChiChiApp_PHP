@@ -1,5 +1,5 @@
 <div class="home_content">
-    <a href="http://page.renren.com/601599241/channel-noteshow-917791438">
+    <a href="http://page.renren.com/601599241/channel-noteshow-917791438" target="_blank">
         <img class="home_img" src="<?php echo base_url('assets/img/home/大冒险.jpg'); ?>"/>
     </a>
 </div>

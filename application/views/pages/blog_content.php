@@ -20,13 +20,15 @@ $count = count($blog['id']);
         </nav>
     </div>
 <?php
-for ($i = 0; $i < $count; $i++) {
+for ($i = $count-1; $i >=0 ; $i--) {
     ?>
     <article class="bl-item">
         <h3 class="bl-item-title">
             <a href="" title="<?= $blog['title'][$i] ?>"
                data-redir="<?= 'blog/' . $blog['id'][$i] ?>" data-redir-target="wd-fullscreen"><?= $blog['title'][$i] ?></a>
         </h3>
+         <a class="bl-item-time" href=""   title="<?= $blog['title'][$i] ?>"
+            data-redir="<?= 'blog/' . $blog['id'][$i] ?>" data-redir-target="wd-fullscreen"><?= $blog['time'][$i] ?></a>
         <a class="bl-item-summary" href="" title="<?= $blog['title'][$i] ?> "
            data-redir="<?= 'blog/' . $blog['id'][$i] ?>" data-redir-target="wd-fullscreen">
             <p><?= $blog['summary'][$i] ?></p>

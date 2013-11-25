@@ -120,8 +120,31 @@ class Controller_Quiz extends CI_Controller {
     }
 
     public function mark($user_id, $question_id) {
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
         $this->load->model('questions_model');
-        $this->questions_model->mark($user_id, $question_id);
-        $this->load->view('templates/empty');
+
+        $data['stylesheet'] = "";
+        $data['script'] = "";
+        $data['title'] = "吃吃大冒险";
+        $data['user_id'] = $user_id;
+        $data['question_id'] = $question_id;
+        $result = $this->questions_model->mark($user_id, $question_id);
+        $correct_answer = $result[0];
+        $user_answer = $result[1];
+        $data['correct_answer'] = $correct_answer;
+        $data['user_answer'] = $user_answer;
+
+        if ($this->input->post()) {
+            $score = $_POST['score'];
+            $former_hop_question = $_POST['question_id'];
+            $former_hop_user = $_POST['user_id'];
+//            $this->questions_model->is_score_empty($former_hop_user, $former_hop_question, $score);
+            $this->questions_model->mark_score($former_hop_user, $former_hop_question, $score);
+        } else {
+            $data['score'] = '';
+        }
+
+        $this->load->view('templates/mark', $data);
     }
 }

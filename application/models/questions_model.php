@@ -38,6 +38,15 @@ class questions_model extends CI_Model {
         else return FALSE;
     }
 
+    public function is_score_empty($user_id, $answer_id, $score)
+    {
+        $sql = "SELECT * FROM users_answers WHERE (user_id=" . $this->db->escape($user_id) . "AND answer_id=" . $this->db->escape($answer_id) . ") AND score=" . $this->db->escape($score);
+        $query = $this->db->query($sql);
+        $result = $query->result();
+        if (!$result) return TRUE;
+        else return FALSE;
+    }
+
     public function insert_answer($user_id, $answer_id, $answer)
     {
         $sql = "INSERT INTO users_answers (user_id, answer_id, answer)
@@ -48,6 +57,12 @@ class questions_model extends CI_Model {
     public function update_answer($user_id, $answer_id, $answer)
     {
         $sql = "UPDATE users_answers SET answer = " . $this->db->escape($answer) . " WHERE user_id = " . $this->db->escape($user_id) . " AND answer_id = " . $this->db->escape($answer_id);
+        $this->db->query($sql);
+    }
+
+    public function update_score($user_id, $answer_id, $score)
+    {
+        $sql = "UPDATE users_answers SET score = " . $this->db->escape($score) . " WHERE user_id = " . $this->db->escape($user_id) . " AND answer_id = " . $this->db->escape($answer_id);
         $this->db->query($sql);
     }
 
@@ -78,10 +93,19 @@ class questions_model extends CI_Model {
         }
     }
 
+    public function mark_score($user_id, $answer_id, $score)
+    {
+        questions_model::update_score($user_id, $answer_id, $score);
+    }
+
     public function mark($user_id, $question_id)
     {
-        $sql = "SELECT * FROM users_answers WHERE user_id=" . $this->db->escape($user_id) . " AND answer_id=" . $this->db->escape($question_id);
-        $query = $this->db->query($sql);
-        $result = $query->result_array();
+        $correct_answer = questions_model::get_question($question_id);
+        $user_answer = questions_model::get_answer($user_id, $question_id);
+        $result = array(
+            $correct_answer[0],
+            $user_answer
+        );
+        return $result;
     }
 }
