@@ -27,7 +27,7 @@
                         <a class="nv-icon nv-icon-archive" data-redir="blog" data-redir-target="wd-main" href="/blog">吃货日志</a>
                     </li>
                     <li>
-                        <a class="nv-icon nv-icon-archive" data-redir="blog" data-redir-target="wd-main" href="/">吃吃留言板</a>
+                        <a class="nv-icon nv-icon-archive"  href="/message/view">吃吃留言板</a>
                     </li>
                     <?php
                     if ($is_logged_in) {

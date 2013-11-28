@@ -1,7 +1,6 @@
 <?php
 //echo 'pages/blog<br>';
 $count = count($blog['id']);
-///echo $count;
 ?>
 <div class="wd-inner">
     <div class="bl-list">
