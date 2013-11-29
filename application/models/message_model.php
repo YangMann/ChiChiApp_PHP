@@ -1,14 +1,12 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-/**
- * Created by PhpStorm.
- * User: icedream
- * Date: 13-11-28
- * Time: 下午2:50
- */
 
-class Message_Model extends CI_Model  {
+class message_model extends CI_Model  {
     function __construct() {
         parent::__construct();
+        $this->load->database();
+    }
+    public function test(){
+        return "aaa";
     }
     public function get_message($messageId) {
         $message = array();
@@ -29,17 +27,23 @@ class Message_Model extends CI_Model  {
         return -1;
     }
 
-    function insert_blog($data) {
-        $this->db->insert('message', $data);
+    function insert_message($data) {
+
+        $user=$data['user'];
+        $time=$data['time'];
+        $content=$data['content'];
+        $sql = "INSERT INTO message (user,time,content)
+        VALUES (" . $user. ",'" .$time . "','" . $content . "'". ")";
+        $this->db->query($sql);
     }
 
-    function update_blog($messageId, $data) {
+    function update_message($messageId, $data) {
         $id = $messageId;
         $this->db->where('id', $id);
         $this->db->update('message', $data);
     }
 
-    function delete_blog($messageId) {
+    function delete_message($messageId) {
         $id = $messageId;
         $this->db->delete('blog', array('id' => $id));
     }

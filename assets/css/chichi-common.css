@@ -2394,3 +2394,14 @@ ul.bl-genre-list li{
     background: url('/assets/img/icons/chichi_xhdpi.png') no-repeat;
     background-size: contain;
 }
+
+.msg-comment{
+    width: 90%;
+    height: 200px;
+}
+.msg-button{
+    float: right;
+    margin-right: 10%;
+    width:70px;
+    height: 40px;
+}
