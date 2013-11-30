@@ -2405,3 +2405,43 @@ ul.bl-genre-list li{
     width:70px;
     height: 40px;
 }
+.msg-decoration{
+    background-color:#cacaca;
+    height:2px;
+    background-repeat:repeat;
+    border-bottom:solid 1px #FFFFFF;
+    margin-bottom:20px;
+    display:block;
+    width:90%;
+    clear:both;
+}
+.msg-container{
+    margin-bottom: 15px;
+}
+
+.msg-container-user{
+    font-weight: bold;
+    font-size: 15px;
+    display:inline;
+}
+.msg-container-time{
+    font-size: 10px;
+    margin-left: 30px;
+    display: inline;
+}
+.msg-container-number{
+    display: inline;
+    float: right;
+    margin-right: 10%;
+    font-size: 15px;
+}
+.msg-container-content{
+    font-size: 16px;
+    padding-top: 20px;
+}
+.msg-container-feedback{
+    margin-top: 20px;
+    width: 90%;
+     padding: 15px;
+     border: 1px solid #bfd9e9;
+}

@@ -5,9 +5,7 @@ class message_model extends CI_Model  {
         parent::__construct();
         $this->load->database();
     }
-    public function test(){
-        return "aaa";
-    }
+
     public function get_message($messageId) {
         $message = array();
         if ($messageId !== null) {
@@ -26,7 +24,9 @@ class message_model extends CI_Model  {
         }
         return -1;
     }
-
+    public function get_all_messages(){
+        return $this->db->get('message')->result_array();
+    }
     function insert_message($data) {
 
         $user=$data['user'];
